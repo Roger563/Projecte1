@@ -38,7 +38,7 @@ public class CharacterController : MonoBehaviour
     }
    void Update()
     {
-        if (Input.GetKeyDown("Jump") && isGrounded == true)
+        if (Input.GetButtonDown("Jump") && isGrounded == true)
         {
             rb.velocity = Vector2.up * jumpForce;
         }
