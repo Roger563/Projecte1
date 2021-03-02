@@ -16,6 +16,10 @@ public class CharacterController : MonoBehaviour
     public float checkRadious;
     public LayerMask whatIsGround;
 
+    private float jumpTimeCounter;
+    public float jumpTime;
+    private bool isJumping;
+
     void Start()
     {
         
@@ -40,7 +44,26 @@ public class CharacterController : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump") && isGrounded == true)
         {
+            isJumping = true;
+            jumpTimeCounter = jumpTime;
             rb.velocity = Vector2.up * jumpForce;
+        }
+        if (Input.GetButton("Jump") && isJumping == true)
+        {
+            if (jumpTimeCounter > 0)
+            {
+                rb.velocity = Vector2.up * jumpForce;
+                jumpTimeCounter -= Time.deltaTime;
+
+            }
+            else
+            {
+                isJumping = false;
+            }
+        }
+
+        if (Input.GetButtonUp("Jump")){
+            isJumping = false;
         }
     }
     void Flip()
