@@ -42,7 +42,7 @@ public class CharacterController : MonoBehaviour
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadious, whatIsGround);
         moveInput = Input.GetAxisRaw("Horizontal");
 
-        if(!wallSliding)       
+        if(!wallJumping)
           rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
         
         if(facingRight == false && moveInput > 0)
