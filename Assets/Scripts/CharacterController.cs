@@ -33,20 +33,30 @@ public class CharacterController : MonoBehaviour
     public float wallJumpTime;
     void Start()
     {
-        
+
         rb = GetComponent<Rigidbody2D>();
 
     }
-   void FixedUpdate()
+    void FixedUpdate()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadious, whatIsGround);
         isTouchingFront = Physics2D.OverlapCircle(frontCheck.position, checkRadious, whatIsGround);
         moveInput = Input.GetAxisRaw("Horizontal");
+        Movement();
+    }
 
-        if(!wallJumping)
-          rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
-        
-        if(facingRight == false && moveInput > 0)
+    void Update()
+    {
+        Jump();
+        WallSliding();
+        WallJumping();
+    }
+
+    void Movement() {
+        if (!wallJumping)
+            rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
+
+        if (facingRight == false && moveInput > 0)
         {
             Flip();
         }
@@ -54,14 +64,8 @@ public class CharacterController : MonoBehaviour
         {
             Flip();
         }
-
-       
-
     }
-
-   void Update()
-    {
-        
+    void Jump() {
         if (Input.GetButtonDown("Jump") && isGrounded == true)
         {
             isJumping = true;
@@ -81,11 +85,13 @@ public class CharacterController : MonoBehaviour
                 isJumping = false;
             }
         }
-
-        if (Input.GetButtonUp("Jump")){
+        if (Input.GetButtonUp("Jump"))
+        {
             isJumping = false;
         }
 
+    }
+    void WallSliding (){
         if (isTouchingFront == true && isGrounded == false && moveInput != 0)
         {
             wallSliding = true;
@@ -98,7 +104,9 @@ public class CharacterController : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -wallSlidingSpeed, float.MaxValue));
         }
-
+    }
+    void WallJumping()
+    {
         if (Input.GetButtonDown("Jump") && wallSliding == true)
         {
             wallJumping = true;
@@ -108,7 +116,6 @@ public class CharacterController : MonoBehaviour
         {
             rb.velocity = new Vector2(xWallForce * -moveInput, yWallForce);
         }
-
     }
     void Flip()
     {
