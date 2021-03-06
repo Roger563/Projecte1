@@ -40,6 +40,7 @@ public class CharacterController : MonoBehaviour
    void FixedUpdate()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadious, whatIsGround);
+        isTouchingFront = Physics2D.OverlapCircle(frontCheck.position, checkRadious, whatIsGround);
         moveInput = Input.GetAxisRaw("Horizontal");
 
         if(!wallJumping)
@@ -60,7 +61,7 @@ public class CharacterController : MonoBehaviour
 
    void Update()
     {
-        isTouchingFront = Physics2D.OverlapCircle(frontCheck.position, checkRadious, whatIsGround);
+        
         if (Input.GetButtonDown("Jump") && isGrounded == true)
         {
             isJumping = true;
