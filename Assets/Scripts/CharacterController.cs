@@ -20,7 +20,6 @@ public class CharacterController : MonoBehaviour
     public float jumpTime;
     private bool isJumping;
 
-
     bool isTouchingFront;
     public Transform frontCheck;
     bool wallSliding;
@@ -31,11 +30,10 @@ public class CharacterController : MonoBehaviour
     public float yWallForce;
     public float wallJumpForce;
     public float wallJumpTime;
+
     void Start()
     {
-
         rb = GetComponent<Rigidbody2D>();
-
     }
     void FixedUpdate()
     {
@@ -66,7 +64,7 @@ public class CharacterController : MonoBehaviour
         }
     }
     void Jump() {
-        if (Input.GetButtonDown("Jump") && isGrounded == true)
+        if (Input.GetButtonDown("Jump") && isGrounded)
         {
             isJumping = true;
             jumpTimeCounter = jumpTime;
@@ -130,4 +128,3 @@ public class CharacterController : MonoBehaviour
 
     }
 }
-   
