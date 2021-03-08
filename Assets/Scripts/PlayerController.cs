@@ -17,7 +17,9 @@ public class PlayerController : MonoBehaviour
     private bool isJumping;
 
     bool wallJumping;
-    public float wallJumpTime;
+    public float wallJumpTime ;
+    private float originalWallJumpTime;
+    
     public Vector2 wJForce = new Vector2(); //new & unused
 
     bool wallSliding;
@@ -32,9 +34,12 @@ public class PlayerController : MonoBehaviour
     Vector2 size;
     public LayerMask maskGround;
 
+ 
+
     void Awake()
     {
         size = new Vector2(GetComponent<BoxCollider2D>().size.x, GetComponent<BoxCollider2D>().size.y);
+        originalWallJumpTime = wallJumpTime;
     }
 
     void Start()
@@ -123,6 +128,36 @@ public class PlayerController : MonoBehaviour
     }
     void WallJump()
     {
+        if (leftWalled && !grounded && Input.GetButtonDown("Jump") )
+        {
+            
+            wallJumping = true;
+            rb.velocity = new Vector2(wJForce.x + moveInput * speed, wJForce.y);
+            wallJumpTime -= Time.deltaTime;
+
+          
+            if (wallJumpTime >= 0 && wallJumping)
+            {
+              wallJumping = false;
+            wallJumpTime = originalWallJumpTime;
+                
+            }
+           
+        }
+        if (rightWalled && !grounded && Input.GetButtonDown("Jump"))
+        {
+
+            wallJumping = true;
+            rb.velocity = new Vector2(-wJForce.x + moveInput * speed, wJForce.y);
+            wallJumpTime -= Time.deltaTime;
+            if (wallJumpTime >= 0 && wallJumping)
+            {
+
+                wallJumping = false;
+                wallJumpTime = originalWallJumpTime;
+            }
+        }
+
 
     }
     void Flip()
