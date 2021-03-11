@@ -128,37 +128,23 @@ public class PlayerController : MonoBehaviour
     }
     void WallJump()
     {
+        if (wallJumpTime <= 0 || (grounded && wallJumpTime < originalWallJumpTime -0.05f) || (leftWalled && wallJumpTime < originalWallJumpTime - 0.05f) || (rightWalled && wallJumpTime < originalWallJumpTime - 0.05f))
+        {
+            wallJumping = false;
+            wallJumpTime = originalWallJumpTime;
+        }
+        if (wallJumping)
+            wallJumpTime -= Time.deltaTime;
         if (leftWalled && !grounded && Input.GetButtonDown("Jump") )
         {
-            
             wallJumping = true;
             rb.velocity = new Vector2(wJForce.x + moveInput * speed, wJForce.y);
-            wallJumpTime -= Time.deltaTime;
-
-          
-            if (wallJumpTime >= 0 && wallJumping)
-            {
-              wallJumping = false;
-            wallJumpTime = originalWallJumpTime;
-                
-            }
-           
         }
         if (rightWalled && !grounded && Input.GetButtonDown("Jump"))
         {
-
             wallJumping = true;
             rb.velocity = new Vector2(-wJForce.x + moveInput * speed, wJForce.y);
-            wallJumpTime -= Time.deltaTime;
-            if (wallJumpTime >= 0 && wallJumping)
-            {
-
-                wallJumping = false;
-                wallJumpTime = originalWallJumpTime;
-            }
         }
-
-
     }
     void Flip()
     {
