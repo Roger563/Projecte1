@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     bool wallJumping;
     public float wallJumpTime ;
     private float originalWallJumpTime;
-    
+    private float wallJumpSpeed;
     public Vector2 wJForce = new Vector2(); //new & unused
 
     bool wallSliding;
@@ -33,8 +33,6 @@ public class PlayerController : MonoBehaviour
     public float distanceDetection;
     Vector2 size;
     public LayerMask maskGround;
-
- 
 
     void Awake()
     {
@@ -81,7 +79,6 @@ public class PlayerController : MonoBehaviour
         {
             rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
         }
-
         if (facingRight == false && moveInput > 0)
         {
             Flip();
@@ -128,22 +125,26 @@ public class PlayerController : MonoBehaviour
     }
     void WallJump()
     {
-        if (wallJumpTime <= 0 || (grounded && wallJumpTime < originalWallJumpTime -0.05f) || (leftWalled && wallJumpTime < originalWallJumpTime - 0.05f) || (rightWalled && wallJumpTime < originalWallJumpTime - 0.05f))
+        if (wallJumpTime <= 0 || (leftWalled && wallJumpTime < originalWallJumpTime - 0.1f) || (rightWalled && wallJumpTime < originalWallJumpTime - 0.1f))
         {
             wallJumping = false;
             wallJumpTime = originalWallJumpTime;
         }
-        if (wallJumping)
-            wallJumpTime -= Time.deltaTime;
-        if (leftWalled && !grounded && Input.GetButtonDown("Jump") )
+        if (leftWalled && !grounded && Input.GetButtonDown("Jump"))
         {
             wallJumping = true;
-            rb.velocity = new Vector2(wJForce.x + moveInput * speed, wJForce.y);
+            rb.velocity = new Vector2(wJForce.x, wJForce.y);
         }
         if (rightWalled && !grounded && Input.GetButtonDown("Jump"))
         {
             wallJumping = true;
-            rb.velocity = new Vector2(-wJForce.x + moveInput * speed, wJForce.y);
+            rb.velocity = new Vector2(-wJForce.x, wJForce.y);
+        }
+        if (wallJumping)
+        {
+            wallJumpTime -= Time.deltaTime;
+            wallJumpSpeed = Mathf.Pow(1.0f - (wallJumpTime / originalWallJumpTime), 1) * (speed*0.4f);
+            rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x + moveInput * wallJumpSpeed, -speed, speed), rb.velocity.y);
         }
     }
     void Flip()
