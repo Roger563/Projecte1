@@ -125,7 +125,7 @@ public class PlayerController : MonoBehaviour
     }
     void WallJump()
     {
-        if (wallJumpTime <= 0 || (leftWalled && wallJumpTime < originalWallJumpTime - 0.1f) || (rightWalled && wallJumpTime < originalWallJumpTime - 0.1f))
+        if (wallJumpTime <= 0 || grounded|| (leftWalled && wallJumpTime < originalWallJumpTime - 0.1f) || (rightWalled && wallJumpTime < originalWallJumpTime - 0.1f))
         {
             wallJumping = false;
             wallJumpTime = originalWallJumpTime;
