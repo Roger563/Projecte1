@@ -125,7 +125,7 @@ public class PlayerController : MonoBehaviour
     }
     void WallJump()
     {
-        if (wallJumpTime <= 0 || grounded|| (leftWalled && wallJumpTime < originalWallJumpTime - 0.1f) || (rightWalled && wallJumpTime < originalWallJumpTime - 0.1f))
+        if (wallJumpTime <= 0 || (grounded) || (leftWalled && wallJumpTime < originalWallJumpTime - 0.1f) || (rightWalled && wallJumpTime < originalWallJumpTime - 0.1f))
         {
             wallJumping = false;
             wallJumpTime = originalWallJumpTime;
@@ -143,7 +143,7 @@ public class PlayerController : MonoBehaviour
         if (wallJumping)
         {
             wallJumpTime -= Time.deltaTime;
-            wallJumpSpeed = Mathf.Pow(1.0f - (wallJumpTime / originalWallJumpTime), 1) * (speed*0.4f);
+            wallJumpSpeed = Mathf.Pow(1.0f - (wallJumpTime / originalWallJumpTime), 1) * (speed*0.05f);
             rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x + moveInput * wallJumpSpeed, -speed, speed), rb.velocity.y);
         }
     }
