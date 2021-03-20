@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     private float moveInput;
     private Rigidbody2D rb;
 
-    private bool facingRight = true;
+    private SpriteRenderer sp;
 
     public float jumpTime;
     private float jumpTimeCounter;
@@ -43,6 +43,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        sp = GetComponent<SpriteRenderer>();
     }
 
     void FixedUpdate()
@@ -79,11 +80,11 @@ public class PlayerController : MonoBehaviour
         {
             rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
         }
-        if (facingRight == false && moveInput > 0)
+        if (sp.flipX == false && rb.velocity.x < 0)
         {
             Flip();
         }
-        else if (facingRight == true && moveInput < 0)
+        else if (sp.flipX == true && rb.velocity.x > 0)
         {
             Flip();
         }
@@ -149,9 +150,6 @@ public class PlayerController : MonoBehaviour
     }
     void Flip()
     {
-        facingRight = !facingRight;
-        Vector3 Scaler = transform.localScale;
-        Scaler.x *= -1;
-        transform.localScale = Scaler;
+        sp.flipX = !sp.flipX;
     }
 }
