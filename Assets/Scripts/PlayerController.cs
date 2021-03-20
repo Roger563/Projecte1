@@ -144,7 +144,7 @@ public class PlayerController : MonoBehaviour
         {
             wallJumpTime -= Time.deltaTime;
             wallJumpSpeed = Mathf.Pow(1.0f - (wallJumpTime / originalWallJumpTime), 1) * (speed*0.05f);
-            rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x + moveInput * wallJumpSpeed, -speed, speed), rb.velocity.y);
+            rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x + (moveInput * wallJumpSpeed)*Time.deltaTime, -speed, speed), rb.velocity.y);
         }
     }
     void Flip()
