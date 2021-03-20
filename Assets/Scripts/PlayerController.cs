@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour
 
     //Collision detection
     private bool grounded;
+    private bool ceilingCheck;
     private bool leftWalled;
     private bool rightWalled;
 
@@ -69,10 +70,13 @@ public class PlayerController : MonoBehaviour
         Vector2 leftRayD = (Vector2)transform.position + Vector2.left * size * 0.5f + Vector2.down * size * 0.5f;
         Vector2 rightRayU = (Vector2)transform.position + Vector2.right * size * 0.5f + Vector2.up * size * 0.5f;   //right
         Vector2 rightRayD = (Vector2)transform.position + Vector2.right * size * 0.5f + Vector2.down * size * 0.5f;
+        Vector2 upRayL =    (Vector2)transform.position + Vector2.up * size * 0.5f + Vector2.left * size * 0.5f;   //up
+        Vector2 upRayR =    (Vector2)transform.position + Vector2.up * size * 0.5f + Vector2.right * size * 0.5f;
 
         grounded = (Physics2D.Raycast(downRayL, Vector2.down, distanceDetection, maskGround) || Physics2D.Raycast(downRayR, Vector2.down, distanceDetection, maskGround));
         leftWalled = (Physics2D.Raycast(leftRayU, Vector2.left, distanceDetection, maskGround) || Physics2D.Raycast(leftRayD, Vector2.left, distanceDetection, maskGround));
         rightWalled = (Physics2D.Raycast(rightRayU, Vector2.right, distanceDetection, maskGround) || Physics2D.Raycast(rightRayD, Vector2.right, distanceDetection, maskGround));
+        ceilingCheck = (Physics2D.Raycast(upRayL, Vector2.up, distanceDetection, maskGround) || Physics2D.Raycast(upRayR, Vector2.up, distanceDetection, maskGround));
     }
     void Movement()
     {
@@ -110,6 +114,11 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonUp("Jump"))
         {
             isJumping = false;
+        }
+        if (ceilingCheck)
+        {
+            jumpTimeCounter = 0;
+            wallJumpTime = 0;
         }
     }
     void WallSliding()
