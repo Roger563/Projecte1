@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-
+    public Animator animator;
     public float speed;
     public float jumpForce;
-    private float moveInput;
+    public float moveInput;
     private Rigidbody2D rb;
 
     private SpriteRenderer sp;
@@ -35,6 +35,8 @@ public class PlayerController : MonoBehaviour
     Vector2 size;
     public LayerMask maskGround;
 
+    public bool magnestism;
+
     void Awake()
     {
         size = new Vector2(GetComponent<BoxCollider2D>().size.x, GetComponent<BoxCollider2D>().size.y);
@@ -49,6 +51,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        magnestism = GetComponent<Magnetism>().magnestism;
         moveInput = Input.GetAxisRaw("Horizontal");
 
         Detection();
@@ -57,6 +60,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
+        animator.SetBool("Grounded", grounded);
         Jump();
         WallSliding();
         WallJump();     //empty
@@ -80,15 +85,23 @@ public class PlayerController : MonoBehaviour
     }
     void Movement()
     {
-        if (!wallJumping)
+        if (!wallJumping && !magnestism)
         {
             rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
         }
-        if (sp.flipX == false && rb.velocity.x < 0)
+        if (sp.flipX == false && rb.velocity.x < 0 && moveInput <=0)
         {
             Flip();
         }
-        else if (sp.flipX == true && rb.velocity.x > 0)
+        else if (sp.flipX == true && rb.velocity.x > 0 && moveInput>=0)
+        {
+            Flip();
+        }
+        else if(grounded && sp.flipX == true && rb.velocity.x >0)
+        {
+            Flip();
+        }
+        else if (grounded && sp.flipX == false && rb.velocity.x < 0)
         {
             Flip();
         }
