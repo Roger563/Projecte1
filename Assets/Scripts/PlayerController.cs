@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour
     Vector2 size;
     public LayerMask maskGround;
 
-    public bool magnestism;
+    public bool magnestism; //delete if not used
 
     void Awake()
     {
@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        magnestism = GetComponent<Magnetism>().magnestism;
+        magnestism = GetComponent<Magnetism>().magnestism; //delete if not used
         moveInput = Input.GetAxisRaw("Horizontal");
 
         Detection();
@@ -85,7 +85,7 @@ public class PlayerController : MonoBehaviour
     }
     void Movement()
     {
-        if (!wallJumping && !magnestism)
+        if (!wallJumping)
         {
             rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
         }
