@@ -5,7 +5,7 @@ using UnityEngine;
 public class Magnetism : MonoBehaviour
 {
 
-    public bool magnestism = false;
+    public bool magnetism = false;
 
     private Rigidbody2D rb;
     private Transform point;
@@ -13,8 +13,10 @@ public class Magnetism : MonoBehaviour
     private List<GameObject> attractors = new List<GameObject>();
     private List<GameObject> repelors = new List<GameObject>();
 
-    public float magneticCoefX;
-    public float magneticCoefY;
+    public float attractorCoefX;
+    public float attractorCoefY;
+    public float repelorCoefX;
+    public float repelorCoefY;
 
     void Start()
     {
@@ -39,8 +41,11 @@ public class Magnetism : MonoBehaviour
             }
             else
             {
-                Attract(ClosestGameObj());
+                Attract(ClosestAttractor());
             }
+        }
+        else {
+            magnetism = false;
         }
         if (Input.GetButton("Fire2"))
         {
@@ -48,18 +53,18 @@ public class Magnetism : MonoBehaviour
             {
                 //fail
             }
+            else
+            {
+                Repel(ClosestRepelor());
+            }
 
         }
         else
         {
-            magnestism = false;
+          
         }
     }
 
-    void attraction()
-    {
-        magnestism = true;
-    }
 
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -95,7 +100,7 @@ public class Magnetism : MonoBehaviour
         }
     }
 
-    Vector2 ClosestGameObj()
+    Vector2 ClosestAttractor()
     {
         Vector2 smallest = new Vector2();
         smallest = attractors[0].transform.position - gameObject.transform.position;
@@ -111,8 +116,30 @@ public class Magnetism : MonoBehaviour
             }
             index++;
         }
+        
 
         return attractors[closest].transform.position;
+    }
+
+    Vector2 ClosestRepelor()
+    {
+        Vector2 smallest = new Vector2();
+        smallest = repelors[0].transform.position - gameObject.transform.position;
+
+        int index = 0;
+        int closest = 0;
+        foreach (GameObject point in repelors) //if there are two or more magnets in range
+        {
+            Vector2 distance = point.transform.position - gameObject.transform.position;
+            if (distance.magnitude < smallest.magnitude)
+            {
+                closest = index;
+            }
+            index++;
+        }
+
+
+        return repelors[closest].transform.position;
     }
 
     void Attract(Vector2 magnet)
@@ -122,6 +149,23 @@ public class Magnetism : MonoBehaviour
         direction = magnet - (Vector2)gameObject.transform.position;
         direction.Normalize();
 
-        rb.velocity = new Vector2(rb.velocity.x + (direction.x * magneticCoefX)*Time.deltaTime, rb.velocity.y + (direction.y * magneticCoefY) *Time.deltaTime);
+        rb.velocity = new Vector2(rb.velocity.x + (direction.x * attractorCoefX)*Time.deltaTime, rb.velocity.y + (direction.y * attractorCoefY) *Time.deltaTime);
     }
+    void Repel(Vector2 magnet)
+    {
+        Vector2 direction = new Vector2();
+
+        direction = magnet-(Vector2)gameObject.transform.position ;
+        direction.Normalize();
+
+        rb.velocity = new Vector2(rb.velocity.x - (direction.x * repelorCoefX) * Time.deltaTime, rb.velocity.y - (direction.y * repelorCoefY) * Time.deltaTime);
+    }
+    void OnCollisionEnter2D (Collision2D col){
+        if ( (col.collider.tag == "attractors"  && Input.GetButton("Fire1")) || (col.collider.tag == "attractAndRepel" && Input.GetButton("Fire1"))) {
+            magnetism = true;
+        }
+    
+    }
+ 
 }
+

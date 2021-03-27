@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour
     Vector2 size;
     public LayerMask maskGround;
 
-    public bool magnestism; //delete if not used
+    public bool magnetism; //delete if not used
 
     void Awake()
     {
@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        magnestism = GetComponent<Magnetism>().magnestism; //delete if not used
+        magnetism = GetComponent<Magnetism>().magnetism; //delete if not used
         moveInput = Input.GetAxisRaw("Horizontal");
 
         Detection();
@@ -85,7 +85,7 @@ public class PlayerController : MonoBehaviour
     }
     void Movement()
     {
-        if (!wallJumping)
+        if (!wallJumping && !magnetism)
         {
             rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
         }
@@ -104,6 +104,9 @@ public class PlayerController : MonoBehaviour
         else if (grounded && sp.flipX == false && rb.velocity.x < 0)
         {
             Flip();
+        }
+        if (magnetism) {
+            rb.velocity =  Vector2.zero;
         }
     }
     void Jump()
