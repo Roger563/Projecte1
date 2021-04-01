@@ -18,6 +18,7 @@ public class Magnetism : MonoBehaviour
     public float repelorCoefX;
     public float repelorCoefY;
 
+    public float maxSpeed;
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
@@ -63,6 +64,8 @@ public class Magnetism : MonoBehaviour
         {
           
         }
+        rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x, -maxSpeed,maxSpeed), Mathf.Clamp(rb.velocity.y, -maxSpeed, maxSpeed));
+       
     }
 
 

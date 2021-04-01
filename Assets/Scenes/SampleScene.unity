@@ -227,7 +227,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 370945299}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 28.88, y: -2.21, z: 8.342845}
+  m_LocalPosition: {x: 31.06, y: -2.21, z: 8.342845}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1117420371}
@@ -1063,10 +1063,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   magnetism: 0
-  attractorCoefX: 400
+  attractorCoefX: 425
   attractorCoefY: 200
   repelorCoefX: 300
   repelorCoefY: 300
+  maxSpeed: 25
 --- !u!1 &1531524043
 GameObject:
   m_ObjectHideFlags: 0
@@ -1848,7 +1849,7 @@ Tilemap:
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       m_AllTileFlags: 1073741825
-  - first: {x: 27, y: -4, z: 0}
+  - first: {x: 29, y: -4, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 26
@@ -2418,21 +2419,21 @@ CompositeCollider2D:
         Y: -40000100
       - X: 370000041
         Y: -40000100
-    - - X: 280000100
+    - - X: 299999900
         Y: -40000041
-      - X: 280000100
+      - X: 299999900
         Y: -29999959
-      - X: 280000041
+      - X: 299999959
         Y: -29999900
-      - X: 269999959
+      - X: 289999959
         Y: -29999900
-      - X: 269999900
+      - X: 289999900
         Y: -29999959
-      - X: 269999900
+      - X: 289999900
         Y: -40000041
-      - X: 269999959
+      - X: 289999959
         Y: -40000100
-      - X: 280000041
+      - X: 299999959
         Y: -40000100
     - - X: -50000000
         Y: -50000000
@@ -2500,10 +2501,10 @@ CompositeCollider2D:
       - {x: 6.9999704, y: -1}
       - {x: 2, y: -1.0000293}
       - {x: 2.0000293, y: -2}
-    - - {x: 27.999975, y: -4.00001}
-      - {x: 27.999975, y: -2.99999}
-      - {x: 26.99999, y: -3.0000253}
-      - {x: 27.000027, y: -4.00001}
+    - - {x: 29.999968, y: -4.00001}
+      - {x: 29.999968, y: -2.99999}
+      - {x: 28.99999, y: -3.0000253}
+      - {x: 29.000027, y: -4.00001}
     - - {x: 36.999973, y: -4.00001}
       - {x: 36.999973, y: -2.99999}
       - {x: 33.00001, y: -3.0000253}
