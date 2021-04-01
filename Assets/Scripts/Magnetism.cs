@@ -19,6 +19,8 @@ public class Magnetism : MonoBehaviour
     public float repelorCoefY;
 
     public float maxSpeed;
+
+    public float counterVelocityCoef;
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
@@ -151,8 +153,21 @@ public class Magnetism : MonoBehaviour
 
         direction = magnet - (Vector2)gameObject.transform.position;
         direction.Normalize();
+        float atractspeed = (direction.x * attractorCoefX) * Time.deltaTime;
+        if (rb.velocity.x > 0)
+        {
+            
+            rb.velocity = new Vector2(rb.velocity.x + Mathf.Clamp(atractspeed, -atractspeed/ counterVelocityCoef, atractspeed), rb.velocity.y + (direction.y * attractorCoefY) * Time.deltaTime);
 
-        rb.velocity = new Vector2(rb.velocity.x + (direction.x * attractorCoefX)*Time.deltaTime, rb.velocity.y + (direction.y * attractorCoefY) *Time.deltaTime);
+        }
+        else if (rb.velocity.x < 0)
+        {
+            
+            rb.velocity = new Vector2(rb.velocity.x + Mathf.Clamp(atractspeed, atractspeed, -atractspeed / counterVelocityCoef), rb.velocity.y + (direction.y * attractorCoefY) * Time.deltaTime);
+
+        }
+        else
+            rb.velocity = new Vector2(rb.velocity.x + (direction.x * attractorCoefX)*Time.deltaTime, rb.velocity.y + (direction.y * attractorCoefY) *Time.deltaTime);
     }
     void Repel(Vector2 magnet)
     {
