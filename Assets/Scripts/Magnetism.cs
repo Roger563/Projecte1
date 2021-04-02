@@ -20,7 +20,10 @@ public class Magnetism : MonoBehaviour
 
     public float maxSpeed;
 
-    public float counterVelocityCoef;
+    public float counterVelocityCoefX;
+    public float velocityBoostX;
+    public float velocityBoostY;
+    private bool wasFalling = false;
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
@@ -48,6 +51,7 @@ public class Magnetism : MonoBehaviour
             }
         }
         else {
+            wasFalling = false;
             magnetism = false;
         }
         if (Input.GetButton("Fire2"))
@@ -107,6 +111,8 @@ public class Magnetism : MonoBehaviour
 
     Vector2 ClosestAttractor()
     {
+        if (attractors.Count == 1) return attractors[0].transform.position;
+
         Vector2 smallest = new Vector2();
         smallest = attractors[0].transform.position - gameObject.transform.position;
 
@@ -150,24 +156,46 @@ public class Magnetism : MonoBehaviour
     void Attract(Vector2 magnet)
     {
         Vector2 direction = new Vector2();
-
         direction = magnet - (Vector2)gameObject.transform.position;
         direction.Normalize();
-        float atractspeed = (direction.x * attractorCoefX) * Time.deltaTime;
+        float atractspeedX = (direction.x * attractorCoefX) * Time.deltaTime;
+        float atractspeedY = (direction.y * attractorCoefY) * Time.deltaTime;
+        float boostedAtractSpeedY = (direction.y * attractorCoefY * velocityBoostY) * Time.deltaTime;
         if (rb.velocity.x > 0)
         {
             
-            rb.velocity = new Vector2(rb.velocity.x + Mathf.Clamp(atractspeed, -atractspeed/ counterVelocityCoef, atractspeed), rb.velocity.y + (direction.y * attractorCoefY) * Time.deltaTime);
+            rb.velocity = new Vector2(rb.velocity.x + Mathf.Clamp(atractspeedX, -atractspeedX/ counterVelocityCoefX, atractspeedX), rb.velocity.y);
 
         }
         else if (rb.velocity.x < 0)
         {
             
-            rb.velocity = new Vector2(rb.velocity.x + Mathf.Clamp(atractspeed, atractspeed, -atractspeed / counterVelocityCoef), rb.velocity.y + (direction.y * attractorCoefY) * Time.deltaTime);
+            rb.velocity = new Vector2(rb.velocity.x + Mathf.Clamp(atractspeedX, atractspeedX, -atractspeedX / counterVelocityCoefX), rb.velocity.y) ;
 
         }
         else
-            rb.velocity = new Vector2(rb.velocity.x + (direction.x * attractorCoefX)*Time.deltaTime, rb.velocity.y + (direction.y * attractorCoefY) *Time.deltaTime);
+            rb.velocity = new Vector2(rb.velocity.x + atractspeedX, rb.velocity.y);
+        if (rb.velocity.y < 0)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y + boostedAtractSpeedY);
+            wasFalling = true;
+
+        }
+       else if (rb.velocity.y > 0 && wasFalling)
+        {
+            if(rb.velocity.x>0)
+            rb.velocity = new Vector2(rb.velocity.x + (velocityBoostX * Time.deltaTime ), rb.velocity.y +atractspeedY);
+            else
+                rb.velocity = new Vector2(rb.velocity.x - (velocityBoostX * Time.deltaTime), rb.velocity.y + atractspeedY);
+
+        }
+        else if (rb.velocity.y >0)
+        {
+            rb.velocity = new Vector2(rb.velocity.x , rb.velocity.y + atractspeedY);
+
+        }
+        if( rb.velocity.y==0)
+            rb.velocity = new Vector2(rb.velocity.x , rb.velocity.y + atractspeedY);
     }
     void Repel(Vector2 magnet)
     {
