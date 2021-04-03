@@ -77,7 +77,8 @@ public class Magnetism : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.tag == "attractors")
+        col.gameObject.transform.GetChild(0).gameObject.SetActive(true);
+        if (col.tag == "attractors")
         {
             attractors.Add(col.gameObject);
         }
@@ -94,6 +95,7 @@ public class Magnetism : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D col)
     {
+        col.gameObject.transform.GetChild(0).gameObject.SetActive(false);
         if (col.tag == "attractors")
         {
             attractors.Remove(col.gameObject);
