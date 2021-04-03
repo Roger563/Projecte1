@@ -526,7 +526,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0.08627451, a: 1}
   m_Intensity: 1
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 31380cc500000000
@@ -1293,6 +1293,7 @@ MonoBehaviour:
   jumpForce: 15
   moveInput: 0
   jumpTime: 0.17
+  OriginalCheckGroundTimer: 0.1
   wallJumpTime: 0.2
   wJForce: {x: 10, y: 18}
   wallSlidingSpeed: 2.5
@@ -1301,6 +1302,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   magnetism: 0
+  OriginalCoyoteTimer: 0.05
 --- !u!114 &1460160436
 MonoBehaviour:
   m_ObjectHideFlags: 0

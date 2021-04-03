@@ -15,6 +15,9 @@ public class PlayerController : MonoBehaviour
     public float jumpTime;
     private float jumpTimeCounter;
     private bool isJumping;
+    private bool jump;
+    public float OriginalCheckGroundTimer;
+    private float CheckGroundTimer;
 
     bool wallJumping;
     public float wallJumpTime ;
@@ -27,6 +30,8 @@ public class PlayerController : MonoBehaviour
 
     //Collision detection
     private bool grounded;
+    private bool wasGrounded;
+    private bool coyoteJump;
     private bool ceilingCheck;
     private bool leftWalled;
     private bool rightWalled;
@@ -35,12 +40,17 @@ public class PlayerController : MonoBehaviour
     Vector2 size;
     public LayerMask maskGround;
 
-    public bool magnetism; //delete if not used
+    public bool magnetism;
+
+    public float OriginalCoyoteTimer;
+    private float coyoteTimer;
+    private bool coyetOn;
 
     void Awake()
     {
         size = new Vector2(GetComponent<BoxCollider2D>().size.x, GetComponent<BoxCollider2D>().size.y);
         originalWallJumpTime = wallJumpTime;
+        coyoteTimer = OriginalCoyoteTimer;
     }
 
     void Start()
@@ -54,7 +64,15 @@ public class PlayerController : MonoBehaviour
         magnetism = GetComponent<Magnetism>().magnetism; //delete if not used
         moveInput = Input.GetAxisRaw("Horizontal");
 
+        wasGrounded = grounded;
+
         Detection();
+
+        if (wasGrounded && !grounded)
+        {
+            coyetOn = true;
+        }
+
         Movement();
     }
 
@@ -64,7 +82,26 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("Grounded", grounded);
         Jump();
         WallSliding();
-        WallJump();     //empty
+        WallJump();
+
+        //a place to put things
+        if (coyetOn)
+            coyoteTimer -= Time.deltaTime;
+
+        if(coyoteTimer <= 0)
+        {
+            coyetOn = false;
+            coyoteTimer = OriginalCoyoteTimer;
+        }
+
+        if(jump)
+            CheckGroundTimer -= Time.deltaTime;
+
+        if (grounded && CheckGroundTimer <= 0)
+        {
+            jump = false;
+            CheckGroundTimer = OriginalCheckGroundTimer;
+        }
     }
 
     void Detection()
@@ -109,10 +146,14 @@ public class PlayerController : MonoBehaviour
             rb.velocity =  Vector2.zero;
         }
     }
+
+
+
     void Jump()
     {
-        if (Input.GetButtonDown("Jump") && grounded)
+        if ((Input.GetButtonDown("Jump") && grounded) || (Input.GetButtonDown("Jump") && (coyetOn && !jump)))
         {
+            jump = true;
             isJumping = true;
             jumpTimeCounter = jumpTime;
             rb.velocity = Vector2.up * jumpForce;
