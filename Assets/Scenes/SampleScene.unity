@@ -561,7 +561,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 825881581}
   m_LocalRotation: {x: -0, y: -0, z: -0.7035204, w: 0.71067506}
-  m_LocalPosition: {x: 0.114785194, y: 0.097165585, z: 5.0566406}
+  m_LocalPosition: {x: 0.01, y: -0.01, z: 5.0566406}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1853344144}
@@ -1293,6 +1293,7 @@ MonoBehaviour:
   jumpForce: 15
   moveInput: 0
   jumpTime: 0.17
+  jumpTimeCounter2Original: 0.2
   OriginalCheckGroundTimer: 0.1
   wallJumpTime: 0.2
   wJForce: {x: 10, y: 18}

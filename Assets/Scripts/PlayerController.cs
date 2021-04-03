@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
 
     public float jumpTime;
     private float jumpTimeCounter;
+    public float jumpTimeCounter2Original;
+    private float jumpTimeCounter2;
     private bool isJumping;
     private bool jump;
     public float OriginalCheckGroundTimer;
@@ -51,6 +53,7 @@ public class PlayerController : MonoBehaviour
         size = new Vector2(GetComponent<BoxCollider2D>().size.x, GetComponent<BoxCollider2D>().size.y);
         originalWallJumpTime = wallJumpTime;
         coyoteTimer = OriginalCoyoteTimer;
+        jumpTimeCounter2 = 0;
     }
 
     void Start()
@@ -93,9 +96,20 @@ public class PlayerController : MonoBehaviour
             coyetOn = false;
             coyoteTimer = OriginalCoyoteTimer;
         }
-
-        if(jump)
+        if (Input.GetButtonDown("Jump"))
+        {
+            jumpTimeCounter2 = jumpTimeCounter2Original;
+        }
+        if (jump)
+        {
             CheckGroundTimer -= Time.deltaTime;
+            jumpTimeCounter2 -= Time.deltaTime;
+        }
+      
+        if (grounded)
+        {
+            jumpTimeCounter2 = 0;
+        }
 
         if (grounded && CheckGroundTimer <= 0)
         {
@@ -151,7 +165,7 @@ public class PlayerController : MonoBehaviour
 
     void Jump()
     {
-        if ((Input.GetButtonDown("Jump") && grounded) || (Input.GetButtonDown("Jump") && (coyetOn && !jump)))
+        if ((Input.GetButtonDown("Jump") && grounded) || (Input.GetButtonDown("Jump") && (coyetOn && !jump))  || (jumpTimeCounter2>0&&grounded))
         {
             jump = true;
             isJumping = true;
@@ -217,5 +231,16 @@ public class PlayerController : MonoBehaviour
     void Flip()
     {
         sp.flipX = !sp.flipX;
+    }
+
+
+    void jumpCheck() {
+
+        if (Input.GetButtonDown("Jump"))
+        {
+            
+        }
+    
+    
     }
 }
