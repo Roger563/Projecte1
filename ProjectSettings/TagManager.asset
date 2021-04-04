@@ -9,6 +9,8 @@ TagManager:
   - attractAndRepel
   - damage
   - Ground
+  - Border
+  - Checkpoint
   layers:
   - Default
   - TransparentFX
