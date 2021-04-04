@@ -25,12 +25,11 @@ public class PlayerController : MonoBehaviour
     public float wallJumpTime ;
     private float originalWallJumpTime;
     private float wallJumpSpeed;
-    public Vector2 wJForce = new Vector2(); //new & unused
+    public Vector2 wJForce = new Vector2();
 
     bool wallSliding;
     public float wallSlidingSpeed;
 
-    //Collision detection
     private bool grounded;
     private bool wasGrounded;
     private bool coyoteJump;
@@ -64,18 +63,10 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        magnetism = GetComponent<Magnetism>().magnetism; //delete if not used
+        magnetism = GetComponent<Magnetism>().magnetism;
         moveInput = Input.GetAxisRaw("Horizontal");
 
-        wasGrounded = grounded;
-
         Detection();
-
-        if (wasGrounded && !grounded)
-        {
-            coyetOn = true;
-        }
-
         Movement();
     }
 
@@ -83,43 +74,17 @@ public class PlayerController : MonoBehaviour
     {
         animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
         animator.SetBool("Grounded", grounded);
+
         Jump();
         WallSliding();
         WallJump();
-
-        //a place to put things
-        if (coyetOn)
-            coyoteTimer -= Time.deltaTime;
-
-        if(coyoteTimer <= 0)
-        {
-            coyetOn = false;
-            coyoteTimer = OriginalCoyoteTimer;
-        }
-        if (Input.GetButtonDown("Jump"))
-        {
-            jumpTimeCounter2 = jumpTimeCounter2Original;
-        }
-        if (jump)
-        {
-            CheckGroundTimer -= Time.deltaTime;
-            jumpTimeCounter2 -= Time.deltaTime;
-        }
-      
-        if (grounded)
-        {
-            jumpTimeCounter2 = 0;
-        }
-
-        if (grounded && CheckGroundTimer <= 0)
-        {
-            jump = false;
-            CheckGroundTimer = OriginalCheckGroundTimer;
-        }
+        BetterInputDetection();
     }
 
     void Detection()
     {
+        wasGrounded = grounded;
+
         Vector2 downRayL = (Vector2)transform.position + Vector2.down * size * 0.5f + Vector2.left * size * 0.5f;   //down
         Vector2 downRayR = (Vector2)transform.position + Vector2.down * size * 0.5f + Vector2.right * size * 0.5f;
         Vector2 leftRayU = (Vector2)transform.position + Vector2.left * size * 0.5f + Vector2.up * size * 0.5f;     //left
@@ -133,7 +98,11 @@ public class PlayerController : MonoBehaviour
         leftWalled = (Physics2D.Raycast(leftRayU, Vector2.left, distanceDetection, maskGround) || Physics2D.Raycast(leftRayD, Vector2.left, distanceDetection, maskGround));
         rightWalled = (Physics2D.Raycast(rightRayU, Vector2.right, distanceDetection, maskGround) || Physics2D.Raycast(rightRayD, Vector2.right, distanceDetection, maskGround));
         ceilingCheck = (Physics2D.Raycast(upRayL, Vector2.up, distanceDetection, maskGround) || Physics2D.Raycast(upRayR, Vector2.up, distanceDetection, maskGround));
+
+        if (wasGrounded && !grounded)
+            coyetOn = true;
     }
+
     void Movement()
     {
         if (!wallJumping && !magnetism)
@@ -160,8 +129,6 @@ public class PlayerController : MonoBehaviour
             rb.velocity =  Vector2.zero;
         }
     }
-
-
 
     void Jump()
     {
@@ -234,13 +201,37 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    void jumpCheck() {
+    void BetterInputDetection()
+    {
+        if (coyetOn)
+            coyoteTimer -= Time.deltaTime;
+
+        if (coyoteTimer <= 0)
+        {
+            coyetOn = false;
+            coyoteTimer = OriginalCoyoteTimer;
+        }
 
         if (Input.GetButtonDown("Jump"))
         {
-            
+            jumpTimeCounter2 = jumpTimeCounter2Original;
         }
-    
-    
+
+        if (jump)
+        {
+            CheckGroundTimer -= Time.deltaTime;
+            jumpTimeCounter2 -= Time.deltaTime;
+        }
+
+        if (grounded)
+        {
+            jumpTimeCounter2 = 0;
+        }
+
+        if (grounded && CheckGroundTimer <= 0)
+        {
+            jump = false;
+            CheckGroundTimer = OriginalCheckGroundTimer;
+        }
     }
 }
