@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CameraSetter : MonoBehaviour
 {
-
     public GameObject newCam;
     public GameObject oldCam;
 

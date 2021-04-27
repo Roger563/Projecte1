@@ -279,7 +279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c96b718cd5df4d346bc723ff005382ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OriginalRespawnTimer: 0.5
+  OriginalRespawnTimer: 1
   checkPoint: {fileID: 0}
 --- !u!114 &4394224616584084428
 MonoBehaviour:

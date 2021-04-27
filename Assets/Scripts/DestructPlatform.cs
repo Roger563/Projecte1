@@ -10,20 +10,17 @@ public class DestructPlatform : MonoBehaviour
     public float regenerateOriginalTimmer;
     private bool destroy = false;
     private bool regenerate = false;
-    // Start is called before the first frame update
+
     void Start()
     {
         destroyTimmer = destroyOriginalTimmer;
         regenerateTimmer = regenerateOriginalTimmer;
     }
 
-    // Update is called once per frame
     void Update()
     {
         Destroy();
         Regenerate();
-
-        
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -32,12 +29,12 @@ public class DestructPlatform : MonoBehaviour
             destroy = true;
         }
     }
+
     void Destroy()
     {
         if (destroy == true)
         {
             destroyTimmer -= Time.deltaTime;
-            
         }
         if (destroyTimmer <= 0)
         {
@@ -48,6 +45,7 @@ public class DestructPlatform : MonoBehaviour
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
         }
     }
+
     void Regenerate()
     {
         if (regenerate == true)
@@ -60,9 +58,7 @@ public class DestructPlatform : MonoBehaviour
             regenerateTimmer = regenerateOriginalTimmer;
             gameObject.GetComponent<SpriteRenderer>().enabled = true;
             gameObject.GetComponent<BoxCollider2D>().enabled = true;
-
         }
-
     }
 }
 

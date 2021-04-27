@@ -18,8 +18,8 @@ public class PlayerController : MonoBehaviour
     private float jumpTimeCounter2;
     private bool isJumping;
     private bool jump;
-    public float OriginalCheckGroundTimer;
-    private float CheckGroundTimer;
+    //public float OriginalCheckGroundTimer;
+    //private float CheckGroundTimer;
 
     bool wallJumping;
     public float wallJumpTime ;
@@ -47,18 +47,21 @@ public class PlayerController : MonoBehaviour
     private float coyoteTimer;
     private bool coyetOn;
 
+    //private Death death;
+
     void Awake()
     {
         size = new Vector2(GetComponent<BoxCollider2D>().size.x, GetComponent<BoxCollider2D>().size.y);
-        originalWallJumpTime = wallJumpTime;
-        coyoteTimer = OriginalCoyoteTimer;
-        jumpTimeCounter2 = 0;
+        //death = gameObject.GetComponent<Death>();
+        rb = GetComponent<Rigidbody2D>();
+        sp = GetComponent<SpriteRenderer>();
     }
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        sp = GetComponent<SpriteRenderer>();
+        originalWallJumpTime = wallJumpTime;
+        coyoteTimer = OriginalCoyoteTimer;
+        jumpTimeCounter2 = 0;
     }
 
     void FixedUpdate()
@@ -75,10 +78,11 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
         animator.SetBool("Grounded", grounded);
 
+        BetterInputDetection();
         Jump();
         WallSliding();
         WallJump();
-        BetterInputDetection();
+        //BetterInputDetection();
     }
 
     void Detection()
@@ -91,7 +95,7 @@ public class PlayerController : MonoBehaviour
         Vector2 leftRayD = (Vector2)transform.position + Vector2.left * size * 0.5f + Vector2.down * size * 0.5f;
         Vector2 rightRayU = (Vector2)transform.position + Vector2.right * size * 0.5f + Vector2.up * size * 0.5f;   //right
         Vector2 rightRayD = (Vector2)transform.position + Vector2.right * size * 0.5f + Vector2.down * size * 0.5f;
-        Vector2 upRayL =    (Vector2)transform.position + Vector2.up * size * 0.5f + Vector2.left * size * 0.5f;   //up
+        Vector2 upRayL =    (Vector2)transform.position + Vector2.up * size * 0.5f + Vector2.left * size * 0.5f;    //up
         Vector2 upRayR =    (Vector2)transform.position + Vector2.up * size * 0.5f + Vector2.right * size * 0.5f;
 
         grounded = (Physics2D.Raycast(downRayL, Vector2.down, distanceDetection, maskGround) || Physics2D.Raycast(downRayR, Vector2.down, distanceDetection, maskGround));
@@ -132,14 +136,14 @@ public class PlayerController : MonoBehaviour
 
     void Jump()
     {
-        if ((Input.GetButtonDown("Jump") && grounded) || (Input.GetButtonDown("Jump") && (coyetOn && !jump))  || (jumpTimeCounter2>0&&grounded))
+        if ((Input.GetButtonDown("Jump") && grounded) || (Input.GetButtonDown("Jump") && (coyetOn && !jump)) || (jumpTimeCounter2 > 0 && grounded))
         {
             jump = true;
             isJumping = true;
             jumpTimeCounter = jumpTime;
             rb.velocity = Vector2.up * jumpForce;
         }
-        if (Input.GetButton("Jump") && isJumping == true)
+        if ((Input.GetButton("Jump") && isJumping == true))
         {
             if (jumpTimeCounter > 0)
             {
@@ -213,25 +217,30 @@ public class PlayerController : MonoBehaviour
         }
 
         if (Input.GetButtonDown("Jump"))
-        {
             jumpTimeCounter2 = jumpTimeCounter2Original;
-        }
 
+        //CheckGroundTimer -= Time.deltaTime;
+        if (jump)
+            jumpTimeCounter2 -= Time.deltaTime;
+
+        /*
         if (jump)
         {
             CheckGroundTimer -= Time.deltaTime;
             jumpTimeCounter2 -= Time.deltaTime;
         }
+        */
 
         if (grounded)
-        {
             jumpTimeCounter2 = 0;
-        }
 
+        /*
+         * GROUNDCHECKTIMER ask
         if (grounded && CheckGroundTimer <= 0)
         {
             jump = false;
             CheckGroundTimer = OriginalCheckGroundTimer;
         }
+        */
     }
 }
