@@ -13,14 +13,14 @@ public class Death : MonoBehaviour
     public Transform checkPoint;
     private float gravScale;
 
-    private CameraShake cam;
+    //private CameraShake cam;
 
     void Awake()//was start
     {
         dead = false;
         respawnTimer = OriginalRespawnTimer;
         gravScale = gameObject.GetComponent<Rigidbody2D>().gravityScale;
-        cam = FindObjectOfType<Cinemachine.CinemachineVirtualCamera>().GetComponent<CameraShake>();
+        //cam = FindObjectOfType<Cinemachine.CinemachineVirtualCamera>().GetComponent<CameraShake>();
     }
 
     void Update()
@@ -48,7 +48,7 @@ public class Death : MonoBehaviour
             gameObject.GetComponent<Magnetism>().enabled = false;
             gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             gameObject.GetComponent<Rigidbody2D>().gravityScale = 0;
-            cam.StartCoroutine("CamShake");
+            //cam.StartCoroutine("CamShake");
 
             deathCounter++;
 
