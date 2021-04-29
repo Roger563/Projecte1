@@ -280,6 +280,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathCounter: 0
   dead: 0
+  animator: {fileID: 4394224616584084436}
   OriginalRespawnTimer: 1
   checkPoint: {fileID: 0}
 --- !u!114 &4394224616584084428

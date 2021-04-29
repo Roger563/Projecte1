@@ -124,6 +124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroyOriginalTimmer: 1
   regenerateOriginalTimmer: 2.5
+  animator: {fileID: 9142036334320766964}
 --- !u!95 &9142036334320766964
 Animator:
   serializedVersion: 3

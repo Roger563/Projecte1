@@ -6,7 +6,7 @@ public class Death : MonoBehaviour
 {
     public int deathCounter;
     public bool dead;
-
+    public Animator animator;
     private float respawnTimer;
     public float OriginalRespawnTimer;
 
@@ -38,6 +38,7 @@ public class Death : MonoBehaviour
             gameObject.GetComponent<Magnetism>().enabled = true;
             gameObject.GetComponent<Rigidbody2D>().gravityScale = gravScale;
         }
+        animator.SetBool("Die",dead);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

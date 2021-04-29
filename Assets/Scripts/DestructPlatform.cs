@@ -10,6 +10,8 @@ public class DestructPlatform : MonoBehaviour
     public float regenerateOriginalTimmer;
     private bool destroy = false;
     private bool regenerate = false;
+    public Animator animator;
+    
 
     void Start()
     {
@@ -21,6 +23,7 @@ public class DestructPlatform : MonoBehaviour
     {
         Destroy();
         Regenerate();
+        animator.SetBool("Destroy", destroy);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
