@@ -279,6 +279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathCounter: 0
+  text: {fileID: 0}
   dead: 0
   animator: {fileID: 4394224616584084436}
   OriginalRespawnTimer: 1

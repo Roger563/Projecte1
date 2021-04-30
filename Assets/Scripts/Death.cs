@@ -5,6 +5,7 @@ using UnityEngine;
 public class Death : MonoBehaviour
 {
     public int deathCounter;
+    GameObject timer;
     public bool dead;
     public Animator animator;
     private float respawnTimer;
@@ -17,6 +18,7 @@ public class Death : MonoBehaviour
 
     void Awake()//was start
     {
+        timer = FindObjectOfType<Timer>().gameObject;
         dead = false;
         respawnTimer = OriginalRespawnTimer;
         gravScale = gameObject.GetComponent<Rigidbody2D>().gravityScale;
@@ -30,6 +32,7 @@ public class Death : MonoBehaviour
 
         if (respawnTimer <= 0)
         {
+            
             dead = false;
             respawnTimer = OriginalRespawnTimer;
 
@@ -37,6 +40,7 @@ public class Death : MonoBehaviour
             gameObject.GetComponent<PlayerController>().enabled = true;
             gameObject.GetComponent<Magnetism>().enabled = true;
             gameObject.GetComponent<Rigidbody2D>().gravityScale = gravScale;
+            timer.GetComponent<Timer>().runTimer = true;
         }
         animator.SetBool("Die",dead);
     }
@@ -45,6 +49,7 @@ public class Death : MonoBehaviour
     {
         if (collision.tag == "damage")
         {
+            timer.GetComponent<Timer>().runTimer = false;
             gameObject.GetComponent<PlayerController>().enabled = false;
             gameObject.GetComponent<Magnetism>().enabled = false;
             gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
