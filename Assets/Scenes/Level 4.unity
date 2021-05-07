@@ -1595,12 +1595,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 5640432632350024383, guid: 0fdf7379e7fcb304f914fe73b12654e2,
-        type: 3}
-      propertyPath: healthyFlower
-      value: 
-      objectReference: {fileID: 21300000, guid: d90f4c22407e6344ab58f05fe515ccd4,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fdf7379e7fcb304f914fe73b12654e2, type: 3}
 --- !u!1001 &1525816785
@@ -2865,10 +2859,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8500555058900499760, guid: 99040bab1d5a59f4d9a30a824ef96b47,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8500555058900499762, guid: 99040bab1d5a59f4d9a30a824ef96b47,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8500555058900499762, guid: 99040bab1d5a59f4d9a30a824ef96b47,
         type: 3}
@@ -2878,7 +2877,7 @@ PrefabInstance:
     - target: {fileID: 8500555059096133717, guid: 99040bab1d5a59f4d9a30a824ef96b47,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3
+      value: -3.5
       objectReference: {fileID: 0}
     - target: {fileID: 8500555059096133717, guid: 99040bab1d5a59f4d9a30a824ef96b47,
         type: 3}
