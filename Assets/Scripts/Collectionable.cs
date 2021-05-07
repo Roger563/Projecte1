@@ -8,7 +8,7 @@ public class Collectionable : MonoBehaviour
     private GameObject flower;
     private Vector3 flowerPos;
     public Sprite healthyFlower;
-
+    
     void Start()
     {
         carryFlower = false;
@@ -34,6 +34,8 @@ public class Collectionable : MonoBehaviour
             collision.enabled = false;
             collision.gameObject.GetComponent<SpriteRenderer>().sprite = healthyFlower;
             flower.SetActive(false);
+            //collision.gameObject.GetComponentInChildren<GameObject>().SetActive(true);
+            collision.transform.GetChild(0).gameObject.SetActive(true);
         }
     }
 
@@ -45,7 +47,7 @@ public class Collectionable : MonoBehaviour
             flower.GetComponent<Collider2D>().enabled = true;
             flower.transform.SetParent(null);
             flower.GetComponent<Transform>().position = flowerPos;
-            carryFlower = false;
+            carryFlower = false; 
         }
     }
 }
