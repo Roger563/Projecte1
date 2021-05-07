@@ -36,6 +36,7 @@ public class Death : MonoBehaviour
             dead = false;
             respawnTimer = OriginalRespawnTimer;
 
+            gameObject.GetComponent<Collectionable>().RespawnFlower();
             gameObject.transform.position = checkPoint.position;
             gameObject.GetComponent<PlayerController>().enabled = true;
             gameObject.GetComponent<Magnetism>().enabled = true;

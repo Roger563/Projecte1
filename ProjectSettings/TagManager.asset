@@ -11,6 +11,8 @@ TagManager:
   - Ground
   - Border
   - Checkpoint
+  - FirstCollect
+  - SecondCollect
   layers:
   - Default
   - TransparentFX

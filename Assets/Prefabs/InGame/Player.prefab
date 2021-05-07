@@ -77,6 +77,7 @@ GameObject:
   - component: {fileID: 4394224616584084430}
   - component: {fileID: 4394224616584084431}
   - component: {fileID: 4394224616584084428}
+  - component: {fileID: 5640432632350024383}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -279,7 +280,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathCounter: 0
-  text: {fileID: 0}
   dead: 0
   animator: {fileID: 4394224616584084436}
   OriginalRespawnTimer: 1
@@ -297,6 +297,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   checkPoints: {fileID: 0}
+--- !u!114 &5640432632350024383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4394224616584084439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f705bc016b060184fba20d89fd892368, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthyFlower: {fileID: 21300000, guid: c85f2d2666c6e57479fbd6c9d2c852c1, type: 3}
 --- !u!1 &4394224616595665487
 GameObject:
   m_ObjectHideFlags: 0
