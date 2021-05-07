@@ -11,6 +11,8 @@ public class DestructPlatform : MonoBehaviour
     private bool destroy = false;
     private bool regenerate = false;
     public Animator animator;
+    public GameObject particles;
+    bool notSpawned = true;
     
 
     void Start()
@@ -39,13 +41,20 @@ public class DestructPlatform : MonoBehaviour
         {
             destroyTimmer -= Time.deltaTime;
         }
+        if (destroyTimmer <= 0.15&& notSpawned)
+        {
+            Instantiate(particles, gameObject.transform);
+            notSpawned = false;
+        }
         if (destroyTimmer <= 0)
         {
             destroy = false;
             regenerate = true;
             destroyTimmer = destroyOriginalTimmer;
+            notSpawned = true;
             gameObject.GetComponent<SpriteRenderer>().enabled = false;
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            
         }
     }
 

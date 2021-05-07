@@ -125,6 +125,8 @@ MonoBehaviour:
   destroyOriginalTimmer: 1
   regenerateOriginalTimmer: 2.5
   animator: {fileID: 9142036334320766964}
+  particles: {fileID: 2647435758617396691, guid: 0a8de41d3e46b6444b05eab4a30fea72,
+    type: 3}
 --- !u!95 &9142036334320766964
 Animator:
   serializedVersion: 3
