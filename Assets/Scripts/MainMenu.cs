@@ -7,9 +7,14 @@ public class MainMenu : MonoBehaviour
 {
 
     // Start is called before the first frame update
-     public void StartButton()
+    public void StartButton()
     {
         SceneManager.LoadScene(1);
+    }
+
+    public void QuitButton()
+    {
+        Application.Quit();
     }
 
     // Update is called once per frame
