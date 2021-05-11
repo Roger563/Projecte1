@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class InGameMenu : MonoBehaviour
 {
     // Start is called before the first frame update
-    public static bool Paused;
+    public static bool Paused = false;
     public GameObject panel;
     void Start()
     {
@@ -30,7 +30,7 @@ public class InGameMenu : MonoBehaviour
 
         
     }
-    void Resume()
+   public void Resume()
     {
         panel.SetActive(false);
         Time.timeScale = 1f;
