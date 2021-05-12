@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
     bool wallSliding;
     public float wallSlidingSpeed;
 
-    private bool grounded;
+    public bool grounded;
     private bool wasGrounded;
     private bool coyoteJump;
     private bool ceilingCheck;
@@ -62,6 +62,12 @@ public class PlayerController : MonoBehaviour
         originalWallJumpTime = wallJumpTime;
         coyoteTimer = OriginalCoyoteTimer;
         jumpTimeCounter2 = 0;
+
+        
+        gameObject.GetComponent<Magnetism>().enabled = false;
+        
+        gameObject.GetComponent<Magnetism>().enabled = true;
+
     }
 
     void FixedUpdate()
