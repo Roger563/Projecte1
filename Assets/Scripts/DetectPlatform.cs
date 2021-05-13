@@ -18,9 +18,7 @@ public class DetectPlatform : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        
-            collision.gameObject.transform.SetParent(gameObject.transform.parent);
-       
+        collision.gameObject.transform.SetParent(gameObject.transform.parent);
     }
     void OnCollisionExit2D(Collision2D other)
     {
