@@ -9,7 +9,8 @@ public class PlayerController : MonoBehaviour
     public float jumpForce;
     public float moveInput;
     private Rigidbody2D rb;
-
+    public bool StandingOnPlatform;
+    public Vector2 platformVelocity;
     private SpriteRenderer sp;
 
     public float jumpTime;
@@ -83,6 +84,7 @@ public class PlayerController : MonoBehaviour
     {
         animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
         animator.SetBool("Grounded", grounded);
+      
 
         BetterInputDetection();
         Jump();
@@ -115,9 +117,12 @@ public class PlayerController : MonoBehaviour
 
     void Movement()
     {
+     
+
         if (!wallJumping && !magnetism)
         {
-            rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
+            rb.velocity = new Vector2((moveInput) * speed, rb.velocity.y);
+
         }
         if (sp.flipX == false && rb.velocity.x < 0 && moveInput <=0)
         {
@@ -138,6 +143,14 @@ public class PlayerController : MonoBehaviour
         if (magnetism) {
             rb.velocity =  Vector2.zero;
         }
+        //si estic a una plataforma li sumo la vel de la plataforma
+        if (StandingOnPlatform)
+        {
+            rb.velocity = new Vector2((moveInput) * speed, rb.velocity.y) + platformVelocity;
+
+
+        }
+
     }
 
     void Jump()
