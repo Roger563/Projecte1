@@ -21299,6 +21299,36 @@ PrefabInstance:
       propertyPath: panel
       value: 
       objectReference: {fileID: 1953408912}
+    - target: {fileID: 8521091929320447659, guid: 2ef8b71eabc782a4ea7050e20f03843c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1953408913}
+    - target: {fileID: 8521091929320447659, guid: 2ef8b71eabc782a4ea7050e20f03843c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MenuButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 8521091930001187082, guid: 2ef8b71eabc782a4ea7050e20f03843c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1953408913}
+    - target: {fileID: 8521091930001187082, guid: 2ef8b71eabc782a4ea7050e20f03843c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Resume
+      objectReference: {fileID: 0}
+    - target: {fileID: 8521091931255168345, guid: 2ef8b71eabc782a4ea7050e20f03843c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1953408913}
+    - target: {fileID: 8521091931255168345, guid: 2ef8b71eabc782a4ea7050e20f03843c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ResetButton
+      objectReference: {fileID: 0}
     - target: {fileID: 8881749757510082481, guid: 2ef8b71eabc782a4ea7050e20f03843c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -21624,6 +21654,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1741812434}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1953408913 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2565606011668267666, guid: 2ef8b71eabc782a4ea7050e20f03843c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1741812434}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953408912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b439606c83011c54b974422efd253325, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1989688793
 PrefabInstance:
   m_ObjectHideFlags: 0
