@@ -939,6 +939,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 747761954843032566, guid: 979e055d3279fcf4c9de7db6ae56b338,
+        type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 747761954843032566, guid: 979e055d3279fcf4c9de7db6ae56b338,
+        type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.data[1]
+      value: -10599203
+      objectReference: {fileID: 0}
     - target: {fileID: 1181299426210961394, guid: 979e055d3279fcf4c9de7db6ae56b338,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4088,6 +4098,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2348705992228786945, guid: 99040bab1d5a59f4d9a30a824ef96b47,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5919095882719306694, guid: 99040bab1d5a59f4d9a30a824ef96b47,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -10599203
+      objectReference: {fileID: 0}
+    - target: {fileID: 5919095882719306694, guid: 99040bab1d5a59f4d9a30a824ef96b47,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 8500555058582247756, guid: 99040bab1d5a59f4d9a30a824ef96b47,
         type: 3}
       propertyPath: m_Name
@@ -4162,6 +4187,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8500555059096133714, guid: 99040bab1d5a59f4d9a30a824ef96b47,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 8500555059096133717, guid: 99040bab1d5a59f4d9a30a824ef96b47,
         type: 3}
@@ -7628,13 +7658,17 @@ CompositeCollider2D:
       - X: 490000000
         Y: 230000000
       - X: 490000000
-        Y: 300000000
-      - X: 500000000
-        Y: 300000000
-      - X: 500000000
-        Y: 310000000
+        Y: 299999900
+      - X: 500000041
+        Y: 299999900
+      - X: 500000100
+        Y: 299999959
+      - X: 500000100
+        Y: 310000041
+      - X: 500000041
+        Y: 310000100
       - X: 490000000
-        Y: 310000000
+        Y: 310000100
       - X: 490000000
         Y: 379999900
       - X: 559999900
@@ -7814,10 +7848,10 @@ CompositeCollider2D:
       - {x: 47.999992, y: 38.999973}
       - {x: 48.00003, y: 23}
       - {x: 49, y: 23.000029}
-      - {x: 49.00003, y: 30}
-      - {x: 50, y: 30.000029}
-      - {x: 49.999973, y: 31}
-      - {x: 49, y: 31.000029}
+      - {x: 49.00003, y: 29.99999}
+      - {x: 50.00001, y: 30.000027}
+      - {x: 49.999973, y: 31.00001}
+      - {x: 49, y: 31.000038}
       - {x: 49.00003, y: 37.999992}
       - {x: 55.99999, y: 37.99996}
       - {x: 55.99996, y: 35}
