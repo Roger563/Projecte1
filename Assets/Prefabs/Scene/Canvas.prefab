@@ -261,7 +261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b439606c83011c54b974422efd253325, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panel: {fileID: 0}
+  panel: {fileID: 8521091930380304752}
 --- !u!1001 &4889270682348497555
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -269,6 +269,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8881749757510082481}
     m_Modifications:
+    - target: {fileID: 3862630738401982410, guid: 84869389850f5714685bbed323988fa8,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2565606011668267666}
+    - target: {fileID: 3862630738401982410, guid: 84869389850f5714685bbed323988fa8,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ResetButton
+      objectReference: {fileID: 0}
     - target: {fileID: 3862630739138391008, guid: 84869389850f5714685bbed323988fa8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -379,8 +389,35 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ingame Menu
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 3862630739563907993, guid: 84869389850f5714685bbed323988fa8,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2565606011668267666}
+    - target: {fileID: 3862630739563907993, guid: 84869389850f5714685bbed323988fa8,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Resume
+      objectReference: {fileID: 0}
+    - target: {fileID: 3862630740223783992, guid: 84869389850f5714685bbed323988fa8,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2565606011668267666}
+    - target: {fileID: 3862630740223783992, guid: 84869389850f5714685bbed323988fa8,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MenuButton
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8902353042802559056, guid: 84869389850f5714685bbed323988fa8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 84869389850f5714685bbed323988fa8, type: 3}
+--- !u!1 &8521091930380304752 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3862630739138391011, guid: 84869389850f5714685bbed323988fa8,
+    type: 3}
+  m_PrefabInstance: {fileID: 4889270682348497555}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &8521091930380304755 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3862630739138391008, guid: 84869389850f5714685bbed323988fa8,

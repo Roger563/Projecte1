@@ -5,6 +5,7 @@ using UnityEngine;
 public class movingPlatform : MonoBehaviour
 {
     public Transform pos1, pos2;
+    public float originalSpeed;
     public float speed;
     public GameObject Robotico;
     private Rigidbody2D rb;
@@ -14,7 +15,6 @@ public class movingPlatform : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
         nextPos =pos1.position;
         rb = GetComponent<Rigidbody2D>();
         if(!vertical)
@@ -23,6 +23,8 @@ public class movingPlatform : MonoBehaviour
          rb.velocity = new Vector2(0, speed);
 
          Velocity = rb.velocity;
+
+        speed = originalSpeed;
     }
 
     // Update is called once per frame

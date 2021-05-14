@@ -13,7 +13,7 @@ public class CloudMovement : MonoBehaviour
         start = transform.parent.position.x;
         end = transform.parent.position.x + 16f;
 
-        transform.position += new Vector3(0.1f*speed, 0f, 0f);
+        transform.position += new Vector3(speed * Time.deltaTime, 0f, 0f);
         if(transform.position.x >= end)
         {
             transform.position = new Vector3(start, transform.position.y, transform.position.z);
