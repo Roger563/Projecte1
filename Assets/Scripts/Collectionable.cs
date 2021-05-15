@@ -48,7 +48,7 @@ public class Collectionable : MonoBehaviour
             flower.SetActive(true);
             flower.GetComponent<Collider2D>().enabled = true;
             flower.transform.SetParent(null);
-            flower.GetComponent<Transform>().position = flowerPos;
+            flower.GetComponent<Transform>().position = new Vector3(flowerPos.x, flowerPos.y - 0.25f, flowerPos.z);
             flower.GetComponent<Animator>().SetBool("Levitate", true);
             carryFlower = false; 
         }

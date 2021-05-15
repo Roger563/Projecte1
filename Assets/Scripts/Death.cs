@@ -39,6 +39,7 @@ public class Death : MonoBehaviour
             gameObject.GetComponent<Collectionable>().RespawnFlower();
             gameObject.transform.position = checkPoint.position;
             gameObject.GetComponent<PlayerController>().enabled = true;
+            gameObject.GetComponent<BoxCollider2D>().enabled = true;
             gameObject.GetComponent<Magnetism>().enabled = true;
             gameObject.GetComponent<Rigidbody2D>().gravityScale = gravScale;
             timer.GetComponent<Timer>().runTimer = true;
@@ -52,6 +53,7 @@ public class Death : MonoBehaviour
         {
             timer.GetComponent<Timer>().runTimer = false;
             gameObject.GetComponent<PlayerController>().enabled = false;
+            gameObject.GetComponent<BoxCollider2D>().enabled = false;
             gameObject.GetComponent<Magnetism>().enabled = false;
             gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             gameObject.GetComponent<Rigidbody2D>().gravityScale = 0;

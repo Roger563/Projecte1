@@ -12,22 +12,21 @@ public class movingPlatform : MonoBehaviour
     public Vector2 Velocity;
     Vector3 nextPos;
     public bool vertical;
-    // Start is called before the first frame update
+
     void Start()
     {
-        nextPos =pos1.position;
+        nextPos = pos1.position;
         rb = GetComponent<Rigidbody2D>();
         if(!vertical)
          rb.velocity = new Vector2(speed, 0);
         else
          rb.velocity = new Vector2(0, speed);
 
-         Velocity = rb.velocity;
+        Velocity = rb.velocity;
 
         speed = originalSpeed;
     }
 
-    // Update is called once per frame
     void Update()
     {
         Robotico.GetComponent<PlayerController>().platformVelocity = Velocity;
@@ -35,7 +34,6 @@ public class movingPlatform : MonoBehaviour
         {
             if (Vector3.Distance(transform.position, pos1.position) <= 0.1f)
             {
-                Debug.Log("ole");
                 rb.velocity = new Vector2(-speed, 0);
                 Velocity = rb.velocity;
             }
@@ -43,7 +41,6 @@ public class movingPlatform : MonoBehaviour
             {
                 rb.velocity = new Vector2(speed, 0);
                 Velocity = rb.velocity;
-                Debug.Log("oleole");
             }
         }
         if (vertical)
@@ -60,10 +57,9 @@ public class movingPlatform : MonoBehaviour
             }
         }
     }
+
     private void OnDrawGizmos()
     {
         Gizmos.DrawLine(pos1.position, pos2.position);
     }
-    
-   
 }
