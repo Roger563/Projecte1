@@ -35,6 +35,7 @@ public class movingPlatform : MonoBehaviour
         {
             if (Vector3.Distance(transform.position, pos1.position) <= 0.1f)
             {
+                Debug.Log("ole");
                 rb.velocity = new Vector2(-speed, 0);
                 Velocity = rb.velocity;
             }
@@ -42,6 +43,7 @@ public class movingPlatform : MonoBehaviour
             {
                 rb.velocity = new Vector2(speed, 0);
                 Velocity = rb.velocity;
+                Debug.Log("oleole");
             }
         }
         if (vertical)

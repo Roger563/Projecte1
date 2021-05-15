@@ -119,37 +119,52 @@ public class PlayerController : MonoBehaviour
     {
      
 
-        if (!wallJumping && !magnetism)
+        if (!wallJumping && !magnetism && !StandingOnPlatform)
         {
             rb.velocity = new Vector2((moveInput) * speed, rb.velocity.y);
-
-        }
-        if (sp.flipX == false && rb.velocity.x < 0 && moveInput <=0)
-        {
-            Flip();
-        }
-        else if (sp.flipX == true && rb.velocity.x > 0 && moveInput>=0)
-        {
-            Flip();
-        }
-        else if(grounded && sp.flipX == true && rb.velocity.x >0)
-        {
-            Flip();
-        }
-        else if (grounded && sp.flipX == false && rb.velocity.x < 0)
-        {
-            Flip();
-        }
-        if (magnetism) {
-            rb.velocity =  Vector2.zero;
+            if (sp.flipX == false && rb.velocity.x < 0 && moveInput <= 0)
+            {
+                Flip();
+            }
+            else if (sp.flipX == true && rb.velocity.x > 0 && moveInput >= 0)
+            {
+                Flip();
+            }
+            else if (grounded && sp.flipX == true && rb.velocity.x > 0)
+            {
+                Flip();
+            }
+            else if (grounded && sp.flipX == false && rb.velocity.x < 0)
+            {
+                Flip();
+            }
         }
         //si estic a una plataforma li sumo la vel de la plataforma
         if (StandingOnPlatform)
         {
             rb.velocity = new Vector2((moveInput) * speed, rb.velocity.y) + platformVelocity;
-
-
+            if (sp.flipX == false && rb.velocity.x < platformVelocity.x && moveInput <= 0)
+            {
+                Flip();
+            }
+            else if (sp.flipX == true && rb.velocity.x > platformVelocity.x && moveInput >= 0)
+            {
+                Flip();
+            }
+            else if (grounded && sp.flipX == true && rb.velocity.x > platformVelocity.x)
+            {
+                Flip();
+            }
+            else if (grounded && sp.flipX == false && rb.velocity.x < platformVelocity.x)
+            {
+                Flip();
+            }
         }
+       
+        if (magnetism) {
+            rb.velocity =  Vector2.zero;
+        }
+    
 
     }
 

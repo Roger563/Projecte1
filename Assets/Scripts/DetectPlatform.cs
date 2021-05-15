@@ -19,7 +19,7 @@ public class DetectPlatform : MonoBehaviour
         animator.SetBool("movingPlatform", standing);
         Player.GetComponent<PlayerController>().StandingOnPlatform = standing;
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
@@ -28,7 +28,7 @@ public class DetectPlatform : MonoBehaviour
         }
         
     }
-    void OnCollisionExit2D(Collision2D other)
+    void OnTriggerExit2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
