@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level_5.unity
     guid: d706f2e7a082593479ccbbd48a08bb85
+  - enabled: 1
+    path: Assets/Scenes/Chunguissim.unity
+    guid: 5367e8fece9762a4f9a4538f08cdb080
   m_configObjects: {}
