@@ -13,6 +13,5 @@ public class CheckpointEdge : MonoBehaviour
         {
             startingEdge.GetComponent<StartingEdge>().start = empty.transform.position;
         }
-        
     }
 }
