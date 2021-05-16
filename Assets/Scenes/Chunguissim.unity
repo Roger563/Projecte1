@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -28648,7 +28648,7 @@ PrefabInstance:
     - target: {fileID: 1102009543724981462, guid: 5312d973fb1bb2a408a3048d856a33d3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1102009543724981462, guid: 5312d973fb1bb2a408a3048d856a33d3,
         type: 3}
@@ -67672,7 +67672,7 @@ PrefabInstance:
     - target: {fileID: 4394224616584084424, guid: 0fdf7379e7fcb304f914fe73b12654e2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4394224616584084424, guid: 0fdf7379e7fcb304f914fe73b12654e2,
         type: 3}
@@ -68379,7 +68379,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &669317157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70157,7 +70157,7 @@ PrefabInstance:
     - target: {fileID: 7711546772542031145, guid: 54138323e318a6c4c886a87d525062e8,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7711546772542031145, guid: 54138323e318a6c4c886a87d525062e8,
         type: 3}
@@ -70730,7 +70730,7 @@ PrefabInstance:
     - target: {fileID: 6424369478663759501, guid: ea2492a554d977748802218fe914b831,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6424369478663759501, guid: ea2492a554d977748802218fe914b831,
         type: 3}
@@ -71409,7 +71409,7 @@ PrefabInstance:
     - target: {fileID: 5855201339204448248, guid: 1c1fda6c95cd52d48b8e4786337a9f6b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5855201339204448248, guid: 1c1fda6c95cd52d48b8e4786337a9f6b,
         type: 3}
@@ -71652,7 +71652,7 @@ PrefabInstance:
     - target: {fileID: 6173713385317053888, guid: f8acc4f5c51e6a843bec5b8b516eba51,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6173713385317053888, guid: f8acc4f5c51e6a843bec5b8b516eba51,
         type: 3}
@@ -73249,7 +73249,7 @@ PrefabInstance:
     - target: {fileID: 5855201339204448248, guid: 1c1fda6c95cd52d48b8e4786337a9f6b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5855201339204448248, guid: 1c1fda6c95cd52d48b8e4786337a9f6b,
         type: 3}
@@ -73343,7 +73343,7 @@ PrefabInstance:
     - target: {fileID: 5222932552979605608, guid: cfc1ea45dea74c94b980a08a1b2efb0c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5222932552979605608, guid: cfc1ea45dea74c94b980a08a1b2efb0c,
         type: 3}
@@ -73996,7 +73996,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!199 &2025390956
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -78985,7 +78985,7 @@ PrefabInstance:
     - target: {fileID: 1329214004229537000, guid: 018e383e69d3d1f4bac6b52d66b5e2fe,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1329214004229537000, guid: 018e383e69d3d1f4bac6b52d66b5e2fe,
         type: 3}
@@ -79115,7 +79115,7 @@ PrefabInstance:
     - target: {fileID: 8500555058582247759, guid: 99040bab1d5a59f4d9a30a824ef96b47,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8500555058582247759, guid: 99040bab1d5a59f4d9a30a824ef96b47,
         type: 3}
@@ -79278,7 +79278,7 @@ PrefabInstance:
     - target: {fileID: 1139387600957936104, guid: db5b16af5ad073f4c98d98c0ba31265f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1139387600957936104, guid: db5b16af5ad073f4c98d98c0ba31265f,
         type: 3}
