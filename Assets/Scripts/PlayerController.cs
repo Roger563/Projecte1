@@ -170,7 +170,9 @@ public class PlayerController : MonoBehaviour
 
     void Jump()
     {
-        if ((Input.GetButtonDown("Jump") && grounded) || (Input.GetButtonDown("Jump") && (coyetOn && !jump)) || (jumpTimeCounter2 > 0 && grounded))
+        if (grounded)
+            jump = false;
+        if ((Input.GetButtonDown("Jump") && grounded) || (Input.GetButtonDown("Jump") && (coyetOn && !jump)))
         {
             jump = true;
             isJumping = true;
@@ -203,6 +205,7 @@ public class PlayerController : MonoBehaviour
         {
             wallSliding = true;
             rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -wallSlidingSpeed, float.MaxValue));
+            
         }
         else
         {
@@ -220,11 +223,15 @@ public class PlayerController : MonoBehaviour
         {
             wallJumping = true;
             rb.velocity = new Vector2(wJForce.x, wJForce.y);
+            //if (moveInput >= 0)
+                Flip();
         }
         if (rightWalled && !grounded && Input.GetButtonDown("Jump"))
         {
             wallJumping = true;
             rb.velocity = new Vector2(-wJForce.x, wJForce.y);
+            //if(moveInput<=0)
+            Flip();
         }
         if (wallJumping)
         {
@@ -250,12 +257,12 @@ public class PlayerController : MonoBehaviour
             coyoteTimer = OriginalCoyoteTimer;
         }
 
-        if (Input.GetButtonDown("Jump"))
-            jumpTimeCounter2 = jumpTimeCounter2Original;
+        //if (Input.GetButtonDown("Jump"))
+            //jumpTimeCounter2 = jumpTimeCounter2Original;
 
         //CheckGroundTimer -= Time.deltaTime;
-        if (jump)
-            jumpTimeCounter2 -= Time.deltaTime;
+        //if (jump)
+          //  jumpTimeCounter2 -= Time.deltaTime;
 
         /*
         if (jump)
@@ -265,8 +272,8 @@ public class PlayerController : MonoBehaviour
         }
         */
 
-        if (grounded)
-            jumpTimeCounter2 = 0;
+        
+           
 
         /*
          * GROUNDCHECKTIMER ask

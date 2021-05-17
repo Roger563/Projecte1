@@ -24,6 +24,8 @@ public class Magnetism : MonoBehaviour
     public float velocityBoostX;
     public float velocityBoostY;
     private bool wasFalling = false;
+    float repelorValue;
+    float attractorValue;
 
     void Start()
     {
@@ -32,7 +34,9 @@ public class Magnetism : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (Input.GetButton("Fire1"))
+        repelorValue = Input.GetAxisRaw("Fire1");
+        attractorValue = Input.GetAxisRaw("Fire2");
+        if (attractorValue != 0)
         {
             if (attractors.Count == 0)
             {
@@ -48,7 +52,7 @@ public class Magnetism : MonoBehaviour
             magnetism = false;
         }
 
-        if (Input.GetButton("Fire2"))
+        if (repelorValue != 0)
         {
             if (repelors.Count == 0)
             {

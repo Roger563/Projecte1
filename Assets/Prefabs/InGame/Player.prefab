@@ -216,11 +216,14 @@ MonoBehaviour:
   speed: 9
   jumpForce: 15
   moveInput: 0
+  StandingOnPlatform: 0
+  platformVelocity: {x: 0, y: 0}
   jumpTime: 0.17
   jumpTimeCounter2Original: 0.1
   wallJumpTime: 0.2
   wJForce: {x: 10, y: 18}
   wallSlidingSpeed: 2.5
+  grounded: 0
   distanceDetection: 0.2
   maskGround:
     serializedVersion: 2
