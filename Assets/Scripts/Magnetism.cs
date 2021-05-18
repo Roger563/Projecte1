@@ -75,11 +75,33 @@ public class Magnetism : MonoBehaviour
 
         if (col.tag == "attractors")
         {
-            attractors.Add(col.gameObject);
+            int i = 0;
+            foreach(GameObject obj in attractors)
+            {
+                if(obj.transform.position == col.transform.position)
+                {
+                    i++;
+                }
+            }
+            if (i == 0)
+            {
+                attractors.Add(col.gameObject);
+            }
         }
         else if(col.tag == "repelors")
         {
-            repelors.Add(col.gameObject);
+            int i = 0;
+            foreach (GameObject obj in repelors)
+            {
+                if (obj.transform.position == col.transform.position)
+                {
+                    i++;
+                }
+            }
+            if (i == 0)
+            {
+                repelors.Add(col.gameObject);
+            }
         }
         else if(col.tag == "attractAndRepel")
         {

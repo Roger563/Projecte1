@@ -7,10 +7,6 @@ public class InGameMenu : MonoBehaviour
     // Start is called before the first frame update
     public static bool Paused = false;
     public GameObject panel;
-    void Start()
-    {
-
-    }
 
     // Update is called once per frame
     void Update()
@@ -25,12 +21,10 @@ public class InGameMenu : MonoBehaviour
             {
                 PauseMenu();
             }
-            
         }
-
-        
     }
-   public void Resume()
+
+    public void Resume()
     {
         panel.SetActive(false);
         Time.timeScale = 1f;
@@ -43,16 +37,17 @@ public class InGameMenu : MonoBehaviour
         Time.timeScale = 0f;
         Paused = true;
     }
+
     public void MenuButton()
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(0);
     }
-   public void ResetButton()
+
+    public void ResetButton()
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Paused = false;
-       
     }
 }
