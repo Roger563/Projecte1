@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2590,6 +2590,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8acc4f5c51e6a843bec5b8b516eba51, type: 3}
+--- !u!1 &336076092 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6173713385317053893, guid: f8acc4f5c51e6a843bec5b8b516eba51,
+    type: 3}
+  m_PrefabInstance: {fileID: 336076091}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &349683265
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51367,6 +51373,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 266421225021367947, guid: 2ef8b71eabc782a4ea7050e20f03843c,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -10599203
+      objectReference: {fileID: 0}
+    - target: {fileID: 266421225021367947, guid: 2ef8b71eabc782a4ea7050e20f03843c,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 266421225021367947, guid: 2ef8b71eabc782a4ea7050e20f03843c,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3287632606775311483, guid: 2ef8b71eabc782a4ea7050e20f03843c,
+        type: 3}
+      propertyPath: mainCam
+      value: 
+      objectReference: {fileID: 336076092}
+    - target: {fileID: 6141310260571679396, guid: 2ef8b71eabc782a4ea7050e20f03843c,
+        type: 3}
+      propertyPath: mainCam
+      value: 
+      objectReference: {fileID: 336076092}
     - target: {fileID: 8881749757510082481, guid: 2ef8b71eabc782a4ea7050e20f03843c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -51476,6 +51507,41 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8959720835488799421, guid: 2ef8b71eabc782a4ea7050e20f03843c,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -10599203
+      objectReference: {fileID: 0}
+    - target: {fileID: 8959720835488799421, guid: 2ef8b71eabc782a4ea7050e20f03843c,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8959720835488799421, guid: 2ef8b71eabc782a4ea7050e20f03843c,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8989486833292636113, guid: 2ef8b71eabc782a4ea7050e20f03843c,
+        type: 3}
+      propertyPath: mainCam
+      value: 
+      objectReference: {fileID: 336076092}
+    - target: {fileID: 9031034699485696888, guid: 2ef8b71eabc782a4ea7050e20f03843c,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -10599203
+      objectReference: {fileID: 0}
+    - target: {fileID: 9031034699485696888, guid: 2ef8b71eabc782a4ea7050e20f03843c,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9031034699485696888, guid: 2ef8b71eabc782a4ea7050e20f03843c,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ef8b71eabc782a4ea7050e20f03843c, type: 3}

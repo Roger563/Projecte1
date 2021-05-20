@@ -613,7 +613,7 @@ Transform:
   - {fileID: 153376214223488527}
   - {fileID: 1237496989}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &594672436
 GameObject:
@@ -645,7 +645,7 @@ Transform:
   - {fileID: 1024457938}
   - {fileID: 1078923973}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &615279279
 PrefabInstance:
@@ -1824,6 +1824,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8acc4f5c51e6a843bec5b8b516eba51, type: 3}
+--- !u!1 &1638900479 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6173713385317053893, guid: f8acc4f5c51e6a843bec5b8b516eba51,
+    type: 3}
+  m_PrefabInstance: {fileID: 1638900478}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1666966761 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1459584914976167802, guid: e8bf5ae586407704f81d871032fbb473,
@@ -1837,11 +1843,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 266421225021367947, guid: 2ef8b71eabc782a4ea7050e20f03843c,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 266421225021367947, guid: 2ef8b71eabc782a4ea7050e20f03843c,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -10599203
+      objectReference: {fileID: 0}
+    - target: {fileID: 266421225021367947, guid: 2ef8b71eabc782a4ea7050e20f03843c,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2565606011668267666, guid: 2ef8b71eabc782a4ea7050e20f03843c,
         type: 3}
       propertyPath: panel
       value: 
       objectReference: {fileID: 1668883381}
+    - target: {fileID: 3287632606775311483, guid: 2ef8b71eabc782a4ea7050e20f03843c,
+        type: 3}
+      propertyPath: mainCam
+      value: 
+      objectReference: {fileID: 1638900479}
+    - target: {fileID: 6141310260571679396, guid: 2ef8b71eabc782a4ea7050e20f03843c,
+        type: 3}
+      propertyPath: mainCam
+      value: 
+      objectReference: {fileID: 1638900479}
     - target: {fileID: 8521091929320447659, guid: 2ef8b71eabc782a4ea7050e20f03843c,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -2016,6 +2047,41 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8959720835488799421, guid: 2ef8b71eabc782a4ea7050e20f03843c,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8959720835488799421, guid: 2ef8b71eabc782a4ea7050e20f03843c,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -10599203
+      objectReference: {fileID: 0}
+    - target: {fileID: 8959720835488799421, guid: 2ef8b71eabc782a4ea7050e20f03843c,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8989486833292636113, guid: 2ef8b71eabc782a4ea7050e20f03843c,
+        type: 3}
+      propertyPath: mainCam
+      value: 
+      objectReference: {fileID: 1638900479}
+    - target: {fileID: 9031034699485696888, guid: 2ef8b71eabc782a4ea7050e20f03843c,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9031034699485696888, guid: 2ef8b71eabc782a4ea7050e20f03843c,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -10599203
+      objectReference: {fileID: 0}
+    - target: {fileID: 9031034699485696888, guid: 2ef8b71eabc782a4ea7050e20f03843c,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ef8b71eabc782a4ea7050e20f03843c, type: 3}

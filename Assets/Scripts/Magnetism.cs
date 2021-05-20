@@ -226,7 +226,7 @@ public class Magnetism : MonoBehaviour
 
     void OnCollisionEnter2D (Collision2D col)
     {
-        if ( (col.collider.tag == "attractors"  && Input.GetButton("Fire1")) || (col.collider.tag == "attractAndRepel" && Input.GetButton("Fire1")))
+        if ( ((col.collider.tag == "attractors"  && attractorValue != 0) || ((col.collider.tag == "attractAndRepel" && attractorValue != 0))))
         {
             magnetism = true;
         }
