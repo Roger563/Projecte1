@@ -17,6 +17,7 @@ public class DetectPlatform : MonoBehaviour
         else
         {
             animator.SetBool("movingPlatform", false);
+            standing = false;
         }
         player.GetComponent<PlayerController>().StandingOnPlatform = standing;
     }
