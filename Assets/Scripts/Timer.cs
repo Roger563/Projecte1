@@ -9,6 +9,9 @@ public class Timer : MonoBehaviour
     private TMP_Text timerTxt;
     float timer=0f;
     public bool runTimer = true;
+    public int minutes;
+    public int seconds;
+    public int milliseconds;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,9 +29,9 @@ public class Timer : MonoBehaviour
     void RunTimer() {
        
         timer += Time.deltaTime;
-        int minutes = Mathf.FloorToInt(timer / 60f);
-        int seconds = Mathf.FloorToInt(timer % 60f);
-        int milliseconds = Mathf.FloorToInt((timer * 100f) % 100f);
+        minutes = Mathf.FloorToInt(timer / 60f);
+        seconds = Mathf.FloorToInt(timer % 60f);
+        milliseconds = Mathf.FloorToInt((timer * 100f) % 100f);
         timerTxt.text =(minutes.ToString("00") + ":" + seconds.ToString("00") + ":" + milliseconds.ToString("00")); 
     } 
     public void ResetTimer()

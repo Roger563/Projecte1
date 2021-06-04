@@ -13,6 +13,7 @@ public class DestructPlatform : MonoBehaviour
     public Animator animator;
     public GameObject particles;
     bool notSpawned = true;
+    public GameObject player;
     
 
     void Start()

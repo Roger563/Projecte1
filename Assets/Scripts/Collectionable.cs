@@ -50,7 +50,7 @@ public class Collectionable : MonoBehaviour
             flower.transform.SetParent(null);
             flower.GetComponent<Transform>().position = new Vector3(flowerPos.x, flowerPos.y - 0.25f, flowerPos.z);
             flower.GetComponent<Animator>().SetBool("Levitate", true);
-            carryFlower = false; 
+            carryFlower = false;
         }
     }
 }
