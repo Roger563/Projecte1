@@ -10,6 +10,11 @@ public class NextLevel : MonoBehaviour
     public GameObject UI;
     public TMP_Text timer;
 
+    public Color32 plat;
+    public Color32 gold;
+    public Color32 silver;
+    public Color32 bronze;
+
     int millis;
     int seconds;
     int minutes;
@@ -29,9 +34,6 @@ public class NextLevel : MonoBehaviour
     public int silverM;
     public int silverS;
 
-    public int bronzeM;
-    public int bronzeS;
-
     int scoreState;
 
     public Canvas canvas;
@@ -47,35 +49,38 @@ public class NextLevel : MonoBehaviour
             seconds = timer.GetComponent<Timer>().seconds;
             minutes = timer.GetComponent<Timer>().minutes;
             timer.enabled = false;
-            UI.transform.GetChild(UI.transform.childCount - 4).gameObject.GetComponent<TMP_Text>().text = ("BRONZE: "+bronzeM.ToString("00") + ":"  + bronzeS.ToString("00") + ":00");
-            UI.transform.GetChild(UI.transform.childCount - 5).gameObject.GetComponent<TMP_Text>().text = ("SILVER: "+silverM.ToString("00") + ":" + silverS.ToString("00") + ":00");
-            UI.transform.GetChild(UI.transform.childCount - 6).gameObject.GetComponent<TMP_Text>().text = ("GOLD:   " + goldM.ToString("00") + ":" + goldS.ToString("00") + ":00");
+            UI.transform.GetChild(UI.transform.childCount - 4).gameObject.GetComponent<TMP_Text>().text = ("PLATINUM: "+ platinoM.ToString("00") + ":"  + platinoS.ToString("00") + ":00");
+            UI.transform.GetChild(UI.transform.childCount - 5).gameObject.GetComponent<TMP_Text>().text = ("SILVER:   "+silverM.ToString("00") + ":" + silverS.ToString("00") + ":00");
+            UI.transform.GetChild(UI.transform.childCount - 6).gameObject.GetComponent<TMP_Text>().text = ("GOLD:     " + goldM.ToString("00") + ":" + goldS.ToString("00") + ":00");
             UI.transform.GetChild(UI.transform.childCount - 1).gameObject.GetComponent<TMP_Text>().text = (minutes.ToString("00") + ":" + seconds.ToString("00") + ":" + millis.ToString("00"));
             canvas.GetComponent<InGameMenu>().enabled = false;
             UI.SetActive(true);
             Time.timeScale = 0;
 
-            if( (minutes<=platinoM) && (seconds<platinoS))
+            Debug.Log(minutes + "min");
+            Debug.Log(seconds + "sec");
+
+            if ((minutes < platinoM) || ((minutes == platinoM) && (seconds < platinoS)))
             {
-                UI.transform.GetChild(UI.transform.childCount - 3).gameObject.GetComponent<Image>().sprite=platinoTrophy;
+                UI.transform.GetChild(UI.transform.childCount - 3).gameObject.GetComponent<Image>().sprite = platinoTrophy;
+                UI.transform.GetChild(UI.transform.childCount - 1).gameObject.GetComponent<TMP_Text>().color = plat;
             }
-            else if ( (minutes <= goldM) && (seconds < goldS) )
+            else if ((minutes < goldM) || ((minutes == goldM) && (seconds < goldS)))
             {
-                UI.transform.GetChild(UI.transform.childCount - 3).gameObject.GetComponent<Image>().sprite=goldTrophy;
+                UI.transform.GetChild(UI.transform.childCount - 3).gameObject.GetComponent<Image>().sprite = goldTrophy;
+                UI.transform.GetChild(UI.transform.childCount - 1).gameObject.GetComponent<TMP_Text>().color = gold;
             }
-            else if ((minutes <= silverM) && (seconds < silverS))
+            else if ((minutes < silverM) || ((minutes == silverM) && (seconds < silverS)))
             {
-                UI.transform.GetChild(UI.transform.childCount - 3).gameObject.GetComponent<Image>().sprite=silverTrophy;
+                UI.transform.GetChild(UI.transform.childCount - 3).gameObject.GetComponent<Image>().sprite = silverTrophy;
+                UI.transform.GetChild(UI.transform.childCount - 1).gameObject.GetComponent<TMP_Text>().color = silver;
             }
-            else  if( (minutes <= bronzeM) && (seconds < bronzeS) )
+            else
             {
-                UI.transform.GetChild(UI.transform.childCount - 3).gameObject.GetComponent<Image>().sprite=bronzeTrophy;
+                UI.transform.GetChild(UI.transform.childCount - 3).gameObject.GetComponent<Image>().sprite = bronzeTrophy;
+                UI.transform.GetChild(UI.transform.childCount - 1).gameObject.GetComponent<TMP_Text>().color = bronze;
             }
-            else 
-            {
-                scoreState = 4;
-            }
-           
+
             if (collect.GetComponent<SpriteRenderer>().sprite.name == "HealthyFlower")
             {
                 UI.transform.GetChild(UI.transform.childCount - 2).gameObject.GetComponent<Image>().sprite=healthyFlower;

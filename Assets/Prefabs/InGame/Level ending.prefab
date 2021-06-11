@@ -121,3 +121,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6e6e3e7b56e2e24da52804c7bd177bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collect: {fileID: 0}
+  UI: {fileID: 0}
+  timer: {fileID: 0}
+  plat:
+    serializedVersion: 2
+    rgba: 4291221280
+  gold:
+    serializedVersion: 2
+    rgba: 4281912573
+  silver:
+    serializedVersion: 2
+    rgba: 4291934642
+  bronze:
+    serializedVersion: 2
+    rgba: 4282807739
+  platinoTrophy: {fileID: 21300000, guid: e2cafd2011356544793aea3ac742a61d, type: 3}
+  goldTrophy: {fileID: 21300000, guid: e1d9da6879a8fdf4aa6763a48d2597e7, type: 3}
+  silverTrophy: {fileID: 21300000, guid: 03d833d4279a927409d29f3f25b10fba, type: 3}
+  bronzeTrophy: {fileID: 21300000, guid: 1cebd973ff55ce14a9acad176d977379, type: 3}
+  healthyFlower: {fileID: 21300000, guid: c85f2d2666c6e57479fbd6c9d2c852c1, type: 3}
+  platinoM: 0
+  platinoS: 0
+  goldM: 0
+  goldS: 0
+  silverM: 0
+  silverS: 0
+  canvas: {fileID: 0}
