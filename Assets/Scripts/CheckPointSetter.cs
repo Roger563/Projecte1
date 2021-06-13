@@ -16,7 +16,8 @@ public class CheckPointSetter : MonoBehaviour
         if (collision.tag == "Border")
         {
             gameObject.GetComponent<Death>().checkPoint = collision.transform.parent.GetComponent<Transform>();
-            collision.gameObject.GetComponent<Animator>().SetBool("On", true);
+            if(collision.gameObject.GetComponent<Transform>().name !="Border1") 
+                collision.gameObject.GetComponent<Animator>().SetBool("On", true);
         }
     }
 }

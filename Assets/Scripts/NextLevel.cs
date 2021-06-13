@@ -57,8 +57,7 @@ public class NextLevel : MonoBehaviour
             UI.SetActive(true);
             Time.timeScale = 0;
 
-            Debug.Log(minutes + "min");
-            Debug.Log(seconds + "sec");
+           
 
             if ((minutes < platinoM) || ((minutes == platinoM) && (seconds < platinoS)))
             {

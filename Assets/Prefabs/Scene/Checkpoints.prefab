@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 1329214005440426740}
   - component: {fileID: 1329214005440426739}
   m_Layer: 0
-  m_Name: Border
+  m_Name: Border1
   m_TagString: Border
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
