@@ -78,6 +78,7 @@ GameObject:
   - component: {fileID: 4394224616584084431}
   - component: {fileID: 4394224616584084428}
   - component: {fileID: 5640432632350024383}
+  - component: {fileID: 4302710793736793571}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -313,6 +314,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthyFlower: {fileID: 21300000, guid: c85f2d2666c6e57479fbd6c9d2c852c1, type: 3}
+--- !u!114 &4302710793736793571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4394224616584084439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac8db62143ceed34d83aceb03bb778bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4394224616595665487
 GameObject:
   m_ObjectHideFlags: 0
