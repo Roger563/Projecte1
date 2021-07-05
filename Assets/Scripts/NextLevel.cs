@@ -18,6 +18,7 @@ public class NextLevel : MonoBehaviour
     int millis;
     int seconds;
     int minutes;
+    int[] highScore = new int[3] {999,999,999};
 
     public Sprite platinoTrophy;
     public Sprite goldTrophy;
@@ -44,7 +45,16 @@ public class NextLevel : MonoBehaviour
     {
         if(collision.tag == "Player")
         {
-            
+            //load game
+           GameData data = SaveGame.LoadGame();
+           
+           highScore[0] = data.time[SceneManager.GetActiveScene().buildIndex - 1][0];
+           highScore[1] = data.time[SceneManager.GetActiveScene().buildIndex - 1][1];
+           highScore[2] = data.time[SceneManager.GetActiveScene().buildIndex - 1][2];
+           
+            //finished loading
+
+
             millis = timer.GetComponent<Timer>().milliseconds;
             seconds = timer.GetComponent<Timer>().seconds;
             minutes = timer.GetComponent<Timer>().minutes;
@@ -85,6 +95,25 @@ public class NextLevel : MonoBehaviour
                 UI.transform.GetChild(UI.transform.childCount - 2).gameObject.GetComponent<Image>().sprite=healthyFlower;
             }
 
+
+
+
+
+
+
+            if ((minutes < highScore[0]) || ((minutes == highScore[0]) && (seconds < highScore[1])) || ((minutes == highScore[0]) && (seconds == highScore[1])&&(millis < highScore[2])))
+            {
+                highScore[0] = minutes;
+                highScore[1] = seconds;
+                highScore[2] = millis;
+                //save highscore
+                data.time[SceneManager.GetActiveScene().buildIndex - 1][0] = highScore[0];
+                data.time[SceneManager.GetActiveScene().buildIndex - 1][1] = highScore[1];
+                data.time[SceneManager.GetActiveScene().buildIndex - 1][2] = highScore[2];
+                SaveGame._SaveHighScore(data.time);
+
+            }
+            UI.transform.GetChild(2).gameObject.GetComponent<TMP_Text>().text = (highScore[0].ToString("00") + ":" + highScore[1].ToString("00") + ":" + highScore[2].ToString("00"));
         }
     }
 }

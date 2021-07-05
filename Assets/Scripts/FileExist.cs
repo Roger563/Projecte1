@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelSelectButton : MonoBehaviour
+public class FileExist : MonoBehaviour
 {
-    public int Level;
-
+    // Start is called before the first frame update
     void Start()
     {
-        
+        SaveGame.FileExist();
     }
 
+    // Update is called once per frame
     void Update()
     {
         
