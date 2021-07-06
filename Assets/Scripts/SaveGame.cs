@@ -26,13 +26,30 @@ public static class SaveGame
         stream.Close();
     }
 
-    public static GameData LoadGame()
+    public static GameData LoadState()
+    {
+        string path = Application.persistentDataPath + "/gameState.magneticRecovery";
+        if (File.Exists(path))
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+            FileStream stream = new FileStream(path, FileMode.Open);
+            GameData data = formatter.Deserialize(stream) as GameData;
+            stream.Close();
+            return data;
+        }
+        else
+        {
+            Debug.LogError("Save file not found in" + path);
+            return null;
+        }
+    }
+    public static GameData LoadHighScore()
     {
         string path = Application.persistentDataPath + "/highScores.magneticRecovery";
         if (File.Exists(path))
         {
             BinaryFormatter formatter = new BinaryFormatter();
-            FileStream stream = new FileStream(path,FileMode.Open);
+            FileStream stream = new FileStream(path, FileMode.Open);
             GameData data = formatter.Deserialize(stream) as GameData;
             stream.Close();
             return data;
@@ -44,6 +61,7 @@ public static class SaveGame
         }
     }
 
+    //create default save files
     public static void FileExist()
     {
         string path = Application.persistentDataPath + "/gameState.magneticRecovery";
@@ -59,7 +77,7 @@ public static class SaveGame
             }
             BinaryFormatter formatter = new BinaryFormatter();
             FileStream stream = new FileStream(path, FileMode.Create);
-            GameData data = new GameData(0, trophy,collectionable);
+            GameData data = new GameData(6, trophy, collectionable); //0
             formatter.Serialize(stream, data);
             stream.Close();
         }

@@ -353,8 +353,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 38
+  m_fontSizeBase: 38
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -369,7 +369,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -508,8 +508,8 @@ RectTransform:
   m_Children:
   - {fileID: 1055060424}
   - {fileID: 1018996528}
-  - {fileID: 910777478}
   - {fileID: 1789194010}
+  - {fileID: 1787501938}
   m_Father: {fileID: 686989567}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -718,7 +718,7 @@ GameObject:
   - component: {fileID: 200630280}
   - component: {fileID: 200630279}
   m_Layer: 0
-  m_Name: Level 1 (16)
+  m_Name: Level 16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -780,7 +780,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 721f398abdac3c446b4198d1290cdcf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Level: 1
 --- !u!114 &200630281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -815,10 +814,10 @@ MonoBehaviour:
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
-    m_HighlightedTrigger: quetecalle
-    m_PressedTrigger: quetecalle
+    m_HighlightedTrigger: Normal
+    m_PressedTrigger: Normal
     m_SelectedTrigger: Selected
-    m_DisabledTrigger: quetecalle
+    m_DisabledTrigger: Normal
   m_Interactable: 1
   m_TargetGraphic: {fileID: 200630282}
   m_OnClick:
@@ -1153,8 +1152,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 38
+  m_fontSizeBase: 38
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1169,7 +1168,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -1292,7 +1291,7 @@ GameObject:
   - component: {fileID: 227484021}
   - component: {fileID: 227484020}
   m_Layer: 0
-  m_Name: ROW 3
+  m_Name: Level 15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1316,7 +1315,7 @@ RectTransform:
   - {fileID: 1066908884}
   - {fileID: 1689127056}
   m_Father: {fileID: 1018996528}
-  m_RootOrder: 12
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1354,7 +1353,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 721f398abdac3c446b4198d1290cdcf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Level: 1
 --- !u!114 &227484022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1389,10 +1387,10 @@ MonoBehaviour:
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
-    m_HighlightedTrigger: quetecalle
-    m_PressedTrigger: quetecalle
+    m_HighlightedTrigger: Normal
+    m_PressedTrigger: Normal
     m_SelectedTrigger: Selected
-    m_DisabledTrigger: quetecalle
+    m_DisabledTrigger: Normal
   m_Interactable: 1
   m_TargetGraphic: {fileID: 227484023}
   m_OnClick:
@@ -1595,7 +1593,7 @@ GameObject:
   - component: {fileID: 295576786}
   - component: {fileID: 295576785}
   m_Layer: 5
-  m_Name: Collectionable
+  m_Name: Flower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1608,17 +1606,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 295576783}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1787501938}
-  m_Father: {fileID: 686989567}
-  m_RootOrder: 1
+  m_Children: []
+  m_Father: {fileID: 1787501938}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 286, y: -413}
+  m_AnchoredPosition: {x: -145, y: 12}
   m_SizeDelta: {x: 64, y: 128}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &295576785
@@ -2127,7 +2124,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 686989567}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2186,7 +2183,7 @@ GameObject:
   - component: {fileID: 394977258}
   - component: {fileID: 394977257}
   m_Layer: 0
-  m_Name: Level 1 (15)
+  m_Name: Level 14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2210,7 +2207,7 @@ RectTransform:
   - {fileID: 540821907}
   - {fileID: 359818809}
   m_Father: {fileID: 1018996528}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2248,7 +2245,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 721f398abdac3c446b4198d1290cdcf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Level: 1
 --- !u!114 &394977259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2283,10 +2279,10 @@ MonoBehaviour:
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
-    m_HighlightedTrigger: quetecalle
-    m_PressedTrigger: quetecalle
+    m_HighlightedTrigger: Normal
+    m_PressedTrigger: Normal
     m_SelectedTrigger: Selected
-    m_DisabledTrigger: quetecalle
+    m_DisabledTrigger: Normal
   m_Interactable: 1
   m_TargetGraphic: {fileID: 394977260}
   m_OnClick:
@@ -2418,7 +2414,7 @@ GameObject:
   - component: {fileID: 413706552}
   - component: {fileID: 413706553}
   m_Layer: 0
-  m_Name: Level 1
+  m_Name: Level 1 - Row 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2483,10 +2479,10 @@ MonoBehaviour:
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
-    m_HighlightedTrigger: quetecalle
-    m_PressedTrigger: quetecalle
+    m_HighlightedTrigger: Normal
+    m_PressedTrigger: Normal
     m_SelectedTrigger: Selected
-    m_DisabledTrigger: quetecalle
+    m_DisabledTrigger: Normal
   m_Interactable: 1
   m_TargetGraphic: {fileID: 413706550}
   m_OnClick:
@@ -2541,7 +2537,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 721f398abdac3c446b4198d1290cdcf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Level: 1
 --- !u!95 &413706553
 Animator:
   serializedVersion: 3
@@ -2839,7 +2834,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4b9b9dc114cbe28419cee7e92f145542, type: 2}
   m_sharedMaterial: {fileID: 4694981863583306205, guid: 4b9b9dc114cbe28419cee7e92f145542,
@@ -3376,7 +3371,7 @@ GameObject:
   - component: {fileID: 673117667}
   - component: {fileID: 673117666}
   m_Layer: 0
-  m_Name: Level 1 (2)
+  m_Name: Level 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3438,7 +3433,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 721f398abdac3c446b4198d1290cdcf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Level: 1
 --- !u!114 &673117668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3473,10 +3467,10 @@ MonoBehaviour:
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
-    m_HighlightedTrigger: quetecalle
-    m_PressedTrigger: quetecalle
+    m_HighlightedTrigger: Normal
+    m_PressedTrigger: Normal
     m_SelectedTrigger: Selected
-    m_DisabledTrigger: quetecalle
+    m_DisabledTrigger: Normal
   m_Interactable: 1
   m_TargetGraphic: {fileID: 673117669}
   m_OnClick:
@@ -3757,7 +3751,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 84174975}
-  - {fileID: 295576784}
   - {fileID: 390043603}
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -4331,7 +4324,7 @@ GameObject:
   - component: {fileID: 759522653}
   - component: {fileID: 759522652}
   m_Layer: 0
-  m_Name: ROW 2
+  m_Name: Level 7 - Row 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4393,7 +4386,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 721f398abdac3c446b4198d1290cdcf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Level: 1
 --- !u!114 &759522654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4428,10 +4420,10 @@ MonoBehaviour:
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
-    m_HighlightedTrigger: quetecalle
-    m_PressedTrigger: quetecalle
+    m_HighlightedTrigger: Normal
+    m_PressedTrigger: Normal
     m_SelectedTrigger: Selected
-    m_DisabledTrigger: quetecalle
+    m_DisabledTrigger: Normal
   m_Interactable: 1
   m_TargetGraphic: {fileID: 759522655}
   m_OnClick:
@@ -4623,7 +4615,7 @@ GameObject:
   - component: {fileID: 805876132}
   - component: {fileID: 805876131}
   m_Layer: 0
-  m_Name: Level 1 (4)
+  m_Name: Level 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4685,7 +4677,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 721f398abdac3c446b4198d1290cdcf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Level: 1
 --- !u!114 &805876133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4720,10 +4711,10 @@ MonoBehaviour:
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
-    m_HighlightedTrigger: quetecalle
-    m_PressedTrigger: quetecalle
+    m_HighlightedTrigger: Normal
+    m_PressedTrigger: Normal
     m_SelectedTrigger: Selected
-    m_DisabledTrigger: quetecalle
+    m_DisabledTrigger: Normal
   m_Interactable: 1
   m_TargetGraphic: {fileID: 805876134}
   m_OnClick:
@@ -5282,7 +5273,7 @@ GameObject:
   - component: {fileID: 910777480}
   - component: {fileID: 910777479}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5299,12 +5290,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 84174975}
-  m_RootOrder: 2
+  m_Father: {fileID: 1789194010}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -440.2302, y: -445}
+  m_AnchoredPosition: {x: -141.53024, y: 9}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &910777479
@@ -5359,7 +5350,7 @@ GameObject:
   - component: {fileID: 944140754}
   - component: {fileID: 944140753}
   m_Layer: 0
-  m_Name: Level 1 (7)
+  m_Name: Level 8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5421,7 +5412,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 721f398abdac3c446b4198d1290cdcf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Level: 1
 --- !u!114 &944140755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5456,10 +5446,10 @@ MonoBehaviour:
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
-    m_HighlightedTrigger: quetecalle
-    m_PressedTrigger: quetecalle
+    m_HighlightedTrigger: Normal
+    m_PressedTrigger: Normal
     m_SelectedTrigger: Selected
-    m_DisabledTrigger: quetecalle
+    m_DisabledTrigger: Normal
   m_Interactable: 1
   m_TargetGraphic: {fileID: 944140756}
   m_OnClick:
@@ -5586,8 +5576,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 38
+  m_fontSizeBase: 38
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5602,7 +5592,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -5651,7 +5641,7 @@ GameObject:
   - component: {fileID: 963117174}
   - component: {fileID: 963117173}
   m_Layer: 0
-  m_Name: Level 1 (11)
+  m_Name: Level 12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5713,7 +5703,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 721f398abdac3c446b4198d1290cdcf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Level: 1
 --- !u!114 &963117175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5748,10 +5737,10 @@ MonoBehaviour:
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
-    m_HighlightedTrigger: quetecalle
-    m_PressedTrigger: quetecalle
+    m_HighlightedTrigger: Normal
+    m_PressedTrigger: Normal
     m_SelectedTrigger: Selected
-    m_DisabledTrigger: quetecalle
+    m_DisabledTrigger: Normal
   m_Interactable: 1
   m_TargetGraphic: {fileID: 963117176}
   m_OnClick:
@@ -6025,6 +6014,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1018996528}
+  - component: {fileID: 1018996529}
   m_Layer: 0
   m_Name: Buttons
   m_TagString: Untagged
@@ -6055,13 +6045,31 @@ Transform:
   - {fileID: 2012551476}
   - {fileID: 1471981999}
   - {fileID: 963117172}
-  - {fileID: 227484019}
   - {fileID: 1639691563}
   - {fileID: 394977256}
+  - {fileID: 227484019}
   - {fileID: 200630278}
   m_Father: {fileID: 84174975}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1018996529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018996527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7de84a1466399984a9146c116d3d4139, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bronze: {fileID: 21300000, guid: 35c50f73a00c9e34792e5eb1504651f3, type: 3}
+  silver: {fileID: 21300000, guid: 61458321f7b44b144ac7aaf9a969f6c8, type: 3}
+  gold: {fileID: 21300000, guid: 67a2144a87e5ec14cb56e44c591ae75a, type: 3}
+  plat: {fileID: 21300000, guid: 11809396f0617c34c875083d5a13d9dc, type: 3}
+  flowerPlat: {fileID: 21300000, guid: ed8a9f023701e4e4bab9daa9507150f2, type: 3}
+  Collectionable: {fileID: 1787501937}
 --- !u!1 &1023146023
 GameObject:
   m_ObjectHideFlags: 0
@@ -6567,7 +6575,7 @@ GameObject:
   - component: {fileID: 1140616907}
   - component: {fileID: 1140616906}
   m_Layer: 0
-  m_Name: Level 1 (3)
+  m_Name: Level 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6629,7 +6637,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 721f398abdac3c446b4198d1290cdcf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Level: 1
 --- !u!114 &1140616908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6664,10 +6671,10 @@ MonoBehaviour:
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
-    m_HighlightedTrigger: quetecalle
-    m_PressedTrigger: quetecalle
+    m_HighlightedTrigger: Normal
+    m_PressedTrigger: Normal
     m_SelectedTrigger: Selected
-    m_DisabledTrigger: quetecalle
+    m_DisabledTrigger: Normal
   m_Interactable: 1
   m_TargetGraphic: {fileID: 1140616909}
   m_OnClick:
@@ -7816,8 +7823,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 38
+  m_fontSizeBase: 38
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -7832,7 +7839,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -8172,8 +8179,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 38
+  m_fontSizeBase: 38
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -8188,7 +8195,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -8525,7 +8532,7 @@ GameObject:
   - component: {fileID: 1464453629}
   - component: {fileID: 1464453628}
   m_Layer: 0
-  m_Name: Level 1 (5)
+  m_Name: Level 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8587,7 +8594,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 721f398abdac3c446b4198d1290cdcf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Level: 1
 --- !u!114 &1464453630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8622,10 +8628,10 @@ MonoBehaviour:
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
-    m_HighlightedTrigger: quetecalle
-    m_PressedTrigger: quetecalle
+    m_HighlightedTrigger: Normal
+    m_PressedTrigger: Normal
     m_SelectedTrigger: Selected
-    m_DisabledTrigger: quetecalle
+    m_DisabledTrigger: Normal
   m_Interactable: 1
   m_TargetGraphic: {fileID: 1464453631}
   m_OnClick:
@@ -8683,7 +8689,7 @@ GameObject:
   - component: {fileID: 1471982001}
   - component: {fileID: 1471982000}
   m_Layer: 0
-  m_Name: Level 1 (10)
+  m_Name: Level 11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8745,7 +8751,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 721f398abdac3c446b4198d1290cdcf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Level: 1
 --- !u!114 &1471982002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8780,10 +8785,10 @@ MonoBehaviour:
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
-    m_HighlightedTrigger: quetecalle
-    m_PressedTrigger: quetecalle
+    m_HighlightedTrigger: Normal
+    m_PressedTrigger: Normal
     m_SelectedTrigger: Selected
-    m_DisabledTrigger: quetecalle
+    m_DisabledTrigger: Normal
   m_Interactable: 1
   m_TargetGraphic: {fileID: 1471982003}
   m_OnClick:
@@ -9507,7 +9512,7 @@ GameObject:
   - component: {fileID: 1639691565}
   - component: {fileID: 1639691564}
   m_Layer: 0
-  m_Name: Level 1 (14)
+  m_Name: Level 13 - Row 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9531,7 +9536,7 @@ RectTransform:
   - {fileID: 979017306}
   - {fileID: 649062247}
   m_Father: {fileID: 1018996528}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -9569,7 +9574,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 721f398abdac3c446b4198d1290cdcf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Level: 1
 --- !u!114 &1639691566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9604,10 +9608,10 @@ MonoBehaviour:
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
-    m_HighlightedTrigger: quetecalle
-    m_PressedTrigger: quetecalle
+    m_HighlightedTrigger: Normal
+    m_PressedTrigger: Normal
     m_SelectedTrigger: Selected
-    m_DisabledTrigger: quetecalle
+    m_DisabledTrigger: Normal
   m_Interactable: 1
   m_TargetGraphic: {fileID: 1639691567}
   m_OnClick:
@@ -9942,8 +9946,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 38
+  m_fontSizeBase: 38
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -9958,7 +9962,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -10152,7 +10156,7 @@ GameObject:
   - component: {fileID: 1787501940}
   - component: {fileID: 1787501939}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Collectionable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10165,16 +10169,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1787501937}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 295576784}
-  m_RootOrder: 0
+  m_Children:
+  - {fileID: 295576784}
+  m_Father: {fileID: 84174975}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 145, y: -12}
+  m_AnchoredPosition: {x: 406, y: -425}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1787501939
@@ -10286,7 +10291,7 @@ GameObject:
   - component: {fileID: 1789194012}
   - component: {fileID: 1789194011}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10302,9 +10307,10 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 910777478}
   m_Father: {fileID: 84174975}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -10497,7 +10503,7 @@ GameObject:
   - component: {fileID: 1819406639}
   - component: {fileID: 1819406638}
   m_Layer: 0
-  m_Name: Level 1 (1)
+  m_Name: Level 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10559,7 +10565,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 721f398abdac3c446b4198d1290cdcf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Level: 1
 --- !u!114 &1819406640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10594,10 +10599,10 @@ MonoBehaviour:
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
-    m_HighlightedTrigger: quetecalle
-    m_PressedTrigger: quetecalle
+    m_HighlightedTrigger: Normal
+    m_PressedTrigger: Normal
     m_SelectedTrigger: Selected
-    m_DisabledTrigger: quetecalle
+    m_DisabledTrigger: Normal
   m_Interactable: 1
   m_TargetGraphic: {fileID: 1819406641}
   m_OnClick:
@@ -10872,8 +10877,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 38
+  m_fontSizeBase: 38
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -10888,7 +10893,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -11011,7 +11016,7 @@ GameObject:
   - component: {fileID: 1966772692}
   - component: {fileID: 1966772691}
   m_Layer: 0
-  m_Name: Level 1 (8)
+  m_Name: Level 9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11073,7 +11078,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 721f398abdac3c446b4198d1290cdcf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Level: 1
 --- !u!114 &1966772693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11108,10 +11112,10 @@ MonoBehaviour:
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
-    m_HighlightedTrigger: quetecalle
-    m_PressedTrigger: quetecalle
+    m_HighlightedTrigger: Normal
+    m_PressedTrigger: Normal
     m_SelectedTrigger: Selected
-    m_DisabledTrigger: quetecalle
+    m_DisabledTrigger: Normal
   m_Interactable: 1
   m_TargetGraphic: {fileID: 1966772694}
   m_OnClick:
@@ -11391,7 +11395,7 @@ GameObject:
   - component: {fileID: 2012551478}
   - component: {fileID: 2012551477}
   m_Layer: 0
-  m_Name: Level 1 (9)
+  m_Name: Level 10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11453,7 +11457,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 721f398abdac3c446b4198d1290cdcf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Level: 1
 --- !u!114 &2012551479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11488,10 +11491,10 @@ MonoBehaviour:
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
-    m_HighlightedTrigger: quetecalle
-    m_PressedTrigger: quetecalle
+    m_HighlightedTrigger: Normal
+    m_PressedTrigger: Normal
     m_SelectedTrigger: Selected
-    m_DisabledTrigger: quetecalle
+    m_DisabledTrigger: Normal
   m_Interactable: 1
   m_TargetGraphic: {fileID: 2012551480}
   m_OnClick:
