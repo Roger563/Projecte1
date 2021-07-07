@@ -77,7 +77,7 @@ public static class SaveGame
             }
             BinaryFormatter formatter = new BinaryFormatter();
             FileStream stream = new FileStream(path, FileMode.Create);
-            GameData data = new GameData(6, trophy, collectionable); //0
+            GameData data = new GameData(0, trophy, collectionable); 
             formatter.Serialize(stream, data);
             stream.Close();
         }

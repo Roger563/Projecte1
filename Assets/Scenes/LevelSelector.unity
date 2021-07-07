@@ -715,8 +715,8 @@ GameObject:
   - component: {fileID: 200630283}
   - component: {fileID: 200630282}
   - component: {fileID: 200630281}
-  - component: {fileID: 200630280}
   - component: {fileID: 200630279}
+  - component: {fileID: 200630280}
   m_Layer: 0
   m_Name: Level 16
   m_TagString: Untagged
@@ -777,7 +777,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 200630277}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 721f398abdac3c446b4198d1290cdcf9, type: 3}
+  m_Script: {fileID: 11500000, guid: 9e816028c0e3c41469cad4627f247a87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &200630281
@@ -822,7 +822,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 200630282}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 200630280}
+        m_MethodName: LoadLvl
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &200630282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1288,8 +1299,8 @@ GameObject:
   - component: {fileID: 227484024}
   - component: {fileID: 227484023}
   - component: {fileID: 227484022}
-  - component: {fileID: 227484021}
   - component: {fileID: 227484020}
+  - component: {fileID: 227484021}
   m_Layer: 0
   m_Name: Level 15
   m_TagString: Untagged
@@ -1350,7 +1361,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 227484018}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 721f398abdac3c446b4198d1290cdcf9, type: 3}
+  m_Script: {fileID: 11500000, guid: 9e816028c0e3c41469cad4627f247a87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &227484022
@@ -1395,7 +1406,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 227484023}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 227484021}
+        m_MethodName: LoadLvl
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &227484023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2180,8 +2202,8 @@ GameObject:
   - component: {fileID: 394977261}
   - component: {fileID: 394977260}
   - component: {fileID: 394977259}
-  - component: {fileID: 394977258}
   - component: {fileID: 394977257}
+  - component: {fileID: 394977258}
   m_Layer: 0
   m_Name: Level 14
   m_TagString: Untagged
@@ -2242,7 +2264,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 394977255}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 721f398abdac3c446b4198d1290cdcf9, type: 3}
+  m_Script: {fileID: 11500000, guid: 9e816028c0e3c41469cad4627f247a87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &394977259
@@ -2287,7 +2309,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 394977260}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 394977258}
+        m_MethodName: LoadLvl
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &394977260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2411,8 +2444,8 @@ GameObject:
   - component: {fileID: 413706551}
   - component: {fileID: 413706550}
   - component: {fileID: 413706549}
-  - component: {fileID: 413706552}
   - component: {fileID: 413706553}
+  - component: {fileID: 413706552}
   m_Layer: 0
   m_Name: Level 1 - Row 1
   m_TagString: Untagged
@@ -2487,7 +2520,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 413706550}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 413706552}
+        m_MethodName: LoadLvl
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &413706550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2534,7 +2589,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 413706547}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 721f398abdac3c446b4198d1290cdcf9, type: 3}
+  m_Script: {fileID: 11500000, guid: 9e816028c0e3c41469cad4627f247a87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!95 &413706553
@@ -3368,8 +3423,8 @@ GameObject:
   - component: {fileID: 673117670}
   - component: {fileID: 673117669}
   - component: {fileID: 673117668}
-  - component: {fileID: 673117667}
   - component: {fileID: 673117666}
+  - component: {fileID: 673117667}
   m_Layer: 0
   m_Name: Level 3
   m_TagString: Untagged
@@ -3430,7 +3485,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 673117664}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 721f398abdac3c446b4198d1290cdcf9, type: 3}
+  m_Script: {fileID: 11500000, guid: 9e816028c0e3c41469cad4627f247a87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &673117668
@@ -3475,7 +3530,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 673117669}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 673117667}
+        m_MethodName: LoadLvl
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &673117669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4321,8 +4387,8 @@ GameObject:
   - component: {fileID: 759522656}
   - component: {fileID: 759522655}
   - component: {fileID: 759522654}
-  - component: {fileID: 759522653}
   - component: {fileID: 759522652}
+  - component: {fileID: 759522653}
   m_Layer: 0
   m_Name: Level 7 - Row 2
   m_TagString: Untagged
@@ -4383,7 +4449,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 759522650}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 721f398abdac3c446b4198d1290cdcf9, type: 3}
+  m_Script: {fileID: 11500000, guid: 9e816028c0e3c41469cad4627f247a87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &759522654
@@ -4428,7 +4494,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 759522655}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 759522653}
+        m_MethodName: LoadLvl
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &759522655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4612,8 +4689,8 @@ GameObject:
   - component: {fileID: 805876135}
   - component: {fileID: 805876134}
   - component: {fileID: 805876133}
-  - component: {fileID: 805876132}
   - component: {fileID: 805876131}
+  - component: {fileID: 805876132}
   m_Layer: 0
   m_Name: Level 5
   m_TagString: Untagged
@@ -4674,7 +4751,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 805876129}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 721f398abdac3c446b4198d1290cdcf9, type: 3}
+  m_Script: {fileID: 11500000, guid: 9e816028c0e3c41469cad4627f247a87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &805876133
@@ -4719,7 +4796,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 805876134}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 805876132}
+        m_MethodName: LoadLvl
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &805876134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5347,8 +5435,8 @@ GameObject:
   - component: {fileID: 944140757}
   - component: {fileID: 944140756}
   - component: {fileID: 944140755}
-  - component: {fileID: 944140754}
   - component: {fileID: 944140753}
+  - component: {fileID: 944140754}
   m_Layer: 0
   m_Name: Level 8
   m_TagString: Untagged
@@ -5409,7 +5497,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 944140751}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 721f398abdac3c446b4198d1290cdcf9, type: 3}
+  m_Script: {fileID: 11500000, guid: 9e816028c0e3c41469cad4627f247a87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &944140755
@@ -5454,7 +5542,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 944140756}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 944140754}
+        m_MethodName: LoadLvl
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &944140756
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5638,8 +5737,8 @@ GameObject:
   - component: {fileID: 963117177}
   - component: {fileID: 963117176}
   - component: {fileID: 963117175}
-  - component: {fileID: 963117174}
   - component: {fileID: 963117173}
+  - component: {fileID: 963117174}
   m_Layer: 0
   m_Name: Level 12
   m_TagString: Untagged
@@ -5700,7 +5799,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 963117171}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 721f398abdac3c446b4198d1290cdcf9, type: 3}
+  m_Script: {fileID: 11500000, guid: 9e816028c0e3c41469cad4627f247a87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &963117175
@@ -5745,7 +5844,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 963117176}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 963117174}
+        m_MethodName: LoadLvl
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &963117176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6572,8 +6682,8 @@ GameObject:
   - component: {fileID: 1140616910}
   - component: {fileID: 1140616909}
   - component: {fileID: 1140616908}
-  - component: {fileID: 1140616907}
   - component: {fileID: 1140616906}
+  - component: {fileID: 1140616907}
   m_Layer: 0
   m_Name: Level 4
   m_TagString: Untagged
@@ -6634,7 +6744,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1140616904}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 721f398abdac3c446b4198d1290cdcf9, type: 3}
+  m_Script: {fileID: 11500000, guid: 9e816028c0e3c41469cad4627f247a87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1140616908
@@ -6679,7 +6789,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1140616909}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1140616907}
+        m_MethodName: LoadLvl
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1140616909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8529,8 +8650,8 @@ GameObject:
   - component: {fileID: 1464453632}
   - component: {fileID: 1464453631}
   - component: {fileID: 1464453630}
-  - component: {fileID: 1464453629}
   - component: {fileID: 1464453628}
+  - component: {fileID: 1464453629}
   m_Layer: 0
   m_Name: Level 6
   m_TagString: Untagged
@@ -8591,7 +8712,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1464453626}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 721f398abdac3c446b4198d1290cdcf9, type: 3}
+  m_Script: {fileID: 11500000, guid: 9e816028c0e3c41469cad4627f247a87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1464453630
@@ -8636,7 +8757,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1464453631}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1464453629}
+        m_MethodName: LoadLvl
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1464453631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8686,8 +8818,8 @@ GameObject:
   - component: {fileID: 1471982004}
   - component: {fileID: 1471982003}
   - component: {fileID: 1471982002}
-  - component: {fileID: 1471982001}
   - component: {fileID: 1471982000}
+  - component: {fileID: 1471982001}
   m_Layer: 0
   m_Name: Level 11
   m_TagString: Untagged
@@ -8748,7 +8880,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1471981998}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 721f398abdac3c446b4198d1290cdcf9, type: 3}
+  m_Script: {fileID: 11500000, guid: 9e816028c0e3c41469cad4627f247a87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1471982002
@@ -8793,7 +8925,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1471982003}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1471982001}
+        m_MethodName: LoadLvl
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1471982003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9509,8 +9652,8 @@ GameObject:
   - component: {fileID: 1639691568}
   - component: {fileID: 1639691567}
   - component: {fileID: 1639691566}
-  - component: {fileID: 1639691565}
   - component: {fileID: 1639691564}
+  - component: {fileID: 1639691565}
   m_Layer: 0
   m_Name: Level 13 - Row 3
   m_TagString: Untagged
@@ -9571,7 +9714,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1639691562}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 721f398abdac3c446b4198d1290cdcf9, type: 3}
+  m_Script: {fileID: 11500000, guid: 9e816028c0e3c41469cad4627f247a87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1639691566
@@ -9616,7 +9759,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1639691567}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1639691565}
+        m_MethodName: LoadLvl
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1639691567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10500,8 +10654,8 @@ GameObject:
   - component: {fileID: 1819406642}
   - component: {fileID: 1819406641}
   - component: {fileID: 1819406640}
-  - component: {fileID: 1819406639}
   - component: {fileID: 1819406638}
+  - component: {fileID: 1819406639}
   m_Layer: 0
   m_Name: Level 2
   m_TagString: Untagged
@@ -10562,7 +10716,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1819406636}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 721f398abdac3c446b4198d1290cdcf9, type: 3}
+  m_Script: {fileID: 11500000, guid: 9e816028c0e3c41469cad4627f247a87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1819406640
@@ -10607,7 +10761,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1819406641}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1819406639}
+        m_MethodName: LoadLvl
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1819406641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11013,8 +11178,8 @@ GameObject:
   - component: {fileID: 1966772695}
   - component: {fileID: 1966772694}
   - component: {fileID: 1966772693}
-  - component: {fileID: 1966772692}
   - component: {fileID: 1966772691}
+  - component: {fileID: 1966772692}
   m_Layer: 0
   m_Name: Level 9
   m_TagString: Untagged
@@ -11075,7 +11240,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1966772689}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 721f398abdac3c446b4198d1290cdcf9, type: 3}
+  m_Script: {fileID: 11500000, guid: 9e816028c0e3c41469cad4627f247a87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1966772693
@@ -11120,7 +11285,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1966772694}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1966772692}
+        m_MethodName: LoadLvl
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1966772694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11392,8 +11568,8 @@ GameObject:
   - component: {fileID: 2012551481}
   - component: {fileID: 2012551480}
   - component: {fileID: 2012551479}
-  - component: {fileID: 2012551478}
   - component: {fileID: 2012551477}
+  - component: {fileID: 2012551478}
   m_Layer: 0
   m_Name: Level 10
   m_TagString: Untagged
@@ -11454,7 +11630,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2012551475}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 721f398abdac3c446b4198d1290cdcf9, type: 3}
+  m_Script: {fileID: 11500000, guid: 9e816028c0e3c41469cad4627f247a87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &2012551479
@@ -11499,7 +11675,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2012551480}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2012551478}
+        m_MethodName: LoadLvl
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2012551480
 MonoBehaviour:
   m_ObjectHideFlags: 0

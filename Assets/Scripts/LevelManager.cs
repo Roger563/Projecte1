@@ -19,9 +19,7 @@ public class LevelManager : MonoBehaviour
 
     void Awake()
     {
-        //load status, collectionables and trophies
-        //load game
-        //data = SaveGame.LoadGame();
+
     }
 
     void Start()
@@ -35,7 +33,7 @@ public class LevelManager : MonoBehaviour
         const int number = 3;
         const int vines = 4;
         //const int selected = 5;
-
+        
         for (int i = 0; i < data.levelsCompleted; i++)
         {
             GameObject obj = transform.GetChild(i).gameObject;
