@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1174,11 +1174,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4394224616584084425, guid: 0fdf7379e7fcb304f914fe73b12654e2,
-        type: 3}
-      propertyPath: OriginalCoyoteTimer
-      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 4394224616584084439, guid: 0fdf7379e7fcb304f914fe73b12654e2,
         type: 3}

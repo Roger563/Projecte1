@@ -231,6 +231,7 @@ MonoBehaviour:
     m_Bits: 256
   magnetism: 0
   OriginalCoyoteTimer: 0.05
+  OriginalDesiredTimer: 0.075
 --- !u!95 &4394224616584084436
 Animator:
   serializedVersion: 3

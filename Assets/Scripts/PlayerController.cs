@@ -48,6 +48,9 @@ public class PlayerController : MonoBehaviour
     private float coyoteTimer;
     private bool coyetOn;
 
+    public float OriginalDesiredTimer;
+    private float desiredTimer;
+
     //private Death death;
 
     void Awake()
@@ -63,8 +66,8 @@ public class PlayerController : MonoBehaviour
         originalWallJumpTime = wallJumpTime;
         coyoteTimer = OriginalCoyoteTimer;
         jumpTimeCounter2 = 0;
+        desiredTimer = 0;
 
-        
         gameObject.GetComponent<Magnetism>().enabled = false;
         
         gameObject.GetComponent<Magnetism>().enabled = true;
@@ -172,7 +175,7 @@ public class PlayerController : MonoBehaviour
     {
         if (grounded)
             jump = false;
-        if ((Input.GetButtonDown("Jump") && grounded) || (Input.GetButtonDown("Jump") && (coyetOn && !jump)))
+        if ((desiredTimer > 0 && grounded) || (Input.GetButtonDown("Jump") && (coyetOn && !jump)))
         {
             jump = true;
             isJumping = true;
@@ -255,6 +258,16 @@ public class PlayerController : MonoBehaviour
         {
             coyetOn = false;
             coyoteTimer = OriginalCoyoteTimer;
+        }
+
+        if(Input.GetButtonDown("Jump"))
+        {
+            desiredTimer = OriginalDesiredTimer;
+        }
+
+        if(desiredTimer > 0)
+        {
+            desiredTimer -= Time.deltaTime;
         }
 
         //if (Input.GetButtonDown("Jump"))
