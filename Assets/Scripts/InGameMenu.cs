@@ -22,6 +22,10 @@ public class InGameMenu : MonoBehaviour
                 PauseMenu();
             }
         }
+        if (Input.GetButtonDown("Cancel"))
+        {
+            Resume();
+        }
     }
 
     public void Resume()

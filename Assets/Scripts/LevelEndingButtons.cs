@@ -14,15 +14,20 @@ public class LevelEndingButtons : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButton("Jump"))
+        if (Input.GetButtonDown("Jump"))
         {
             Time.timeScale = 1;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
-        if(Input.GetButton("Cancel"))
+        if(Input.GetButtonDown("Cancel"))
         {
             Time.timeScale = 1;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+        if (Input.GetButtonDown("y"))
+        {
+            Time.timeScale = 1;
+            SceneManager.LoadScene(0);
         }
     }
 }
