@@ -51,12 +51,16 @@ public class PlayerController : MonoBehaviour
     public float OriginalDesiredTimer;
     private float desiredTimer;
 
-    //private Death death;
+    public AudioManager audioManager;
+
+    //Footsteps variables
+    [HideInInspector]
+    public bool footS;
+    private bool prevFootS;
 
     void Awake()
     {
         size = new Vector2(GetComponent<BoxCollider2D>().size.x, GetComponent<BoxCollider2D>().size.y);
-        //death = gameObject.GetComponent<Death>();
         rb = GetComponent<Rigidbody2D>();
         sp = GetComponent<SpriteRenderer>();
     }
@@ -67,11 +71,12 @@ public class PlayerController : MonoBehaviour
         coyoteTimer = OriginalCoyoteTimer;
         jumpTimeCounter2 = 0;
         desiredTimer = 0;
+        footS = false;
+        prevFootS = footS;
 
         gameObject.GetComponent<Magnetism>().enabled = false;
         
         gameObject.GetComponent<Magnetism>().enabled = true;
-
     }
 
     void FixedUpdate()
@@ -88,12 +93,12 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
         animator.SetBool("Grounded", grounded);
       
-
         BetterInputDetection();
         Jump();
         WallSliding();
         WallJump();
-        //BetterInputDetection();
+
+        FootSteps();
     }
 
     void Detection()
@@ -120,8 +125,6 @@ public class PlayerController : MonoBehaviour
 
     void Movement()
     {
-     
-
         if (!wallJumping && !magnetism && !StandingOnPlatform)
         {
             rb.velocity = new Vector2((moveInput) * speed, rb.velocity.y);
@@ -167,8 +170,6 @@ public class PlayerController : MonoBehaviour
         if (magnetism) {
             rb.velocity =  Vector2.zero;
         }
-    
-
     }
 
     void Jump()
@@ -208,7 +209,6 @@ public class PlayerController : MonoBehaviour
         {
             wallSliding = true;
             rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -wallSlidingSpeed, float.MaxValue));
-            
         }
         else
         {
@@ -269,32 +269,14 @@ public class PlayerController : MonoBehaviour
         {
             desiredTimer -= Time.deltaTime;
         }
+    }
 
-        //if (Input.GetButtonDown("Jump"))
-            //jumpTimeCounter2 = jumpTimeCounter2Original;
-
-        //CheckGroundTimer -= Time.deltaTime;
-        //if (jump)
-          //  jumpTimeCounter2 -= Time.deltaTime;
-
-        /*
-        if (jump)
-        {
-            CheckGroundTimer -= Time.deltaTime;
-            jumpTimeCounter2 -= Time.deltaTime;
+    void FootSteps()
+    {
+        if (!prevFootS && footS) {
+            audioManager.Play("FootStep");
         }
-        */
 
-        
-           
-
-        /*
-         * GROUNDCHECKTIMER ask
-        if (grounded && CheckGroundTimer <= 0)
-        {
-            jump = false;
-            CheckGroundTimer = OriginalCheckGroundTimer;
-        }
-        */
+        prevFootS = footS;
     }
 }
