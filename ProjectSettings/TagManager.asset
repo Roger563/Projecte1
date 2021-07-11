@@ -13,6 +13,7 @@ TagManager:
   - Checkpoint
   - FirstCollect
   - SecondCollect
+  - despawn
   layers:
   - Default
   - TransparentFX
