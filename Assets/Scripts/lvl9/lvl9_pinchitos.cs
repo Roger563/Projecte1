@@ -12,6 +12,8 @@ public class lvl9_pinchitos : MonoBehaviour
     public enum Direction { None, Left, Right, Up, Down }
     public Direction direction;
 
+    public bool TriggerExit;
+
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
@@ -38,7 +40,16 @@ public class lvl9_pinchitos : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.tag == "despawn") {
+        if (!TriggerExit && other.gameObject.tag == "despawn")
+        {
+            gameObject.transform.position = respawn.position;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (TriggerExit && other.gameObject.tag == "despawn")
+        {
             gameObject.transform.position = respawn.position;
         }
     }
