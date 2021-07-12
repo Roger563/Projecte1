@@ -4,19 +4,39 @@ using UnityEngine;
 
 public class lvl9_pinchitos : MonoBehaviour
 {
+    private Rigidbody2D rb;
+
     public Transform respawn;
-        // Start is called before the first frame update
+    public float speed;
+
+    public enum Direction { None, Left, Right, Up, Down }
+    public Direction direction;
+
     void Start()
     {
-        
+        rb = gameObject.GetComponent<Rigidbody2D>();
+
+        switch (direction)
+        {
+            case Direction.None:
+                rb.velocity = new Vector2(0, 0);
+                break;
+            case Direction.Left:
+                rb.velocity = new Vector2(speed, 0);
+                break;
+            case Direction.Right:
+                rb.velocity = new Vector2(-speed, 0);
+                break;
+            case Direction.Up:
+                rb.velocity = new Vector2(0, speed);
+                break;
+            case Direction.Down:
+                rb.velocity = new Vector2(0, -speed);
+                break;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         if(other.gameObject.tag == "despawn") {
             gameObject.transform.position = respawn.position;
