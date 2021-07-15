@@ -38,6 +38,7 @@ public class lvl9_pinchitos : MonoBehaviour
         }
     }
 
+    /*
     void OnTriggerEnter2D(Collider2D other)
     {
         if (!TriggerExit && other.gameObject.tag == "despawn")
@@ -53,4 +54,5 @@ public class lvl9_pinchitos : MonoBehaviour
             gameObject.transform.position = respawn.position;
         }
     }
+    */
 }

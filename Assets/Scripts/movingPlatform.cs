@@ -45,14 +45,14 @@ public class movingPlatform : MonoBehaviour
         }
         if (vertical)
         {
-            if (Vector3.Distance(transform.position, pos2.position) <= 0.1f)
+            if (Vector3.Distance(transform.position, pos2.position) <= 0.15f)
             {
-                rb.velocity = new Vector2(0, -speed);
+                rb.velocity = new Vector2(0, speed); //gdhintjbf
                 Velocity = rb.velocity;
             }
-            if (Vector3.Distance(transform.position, pos1.position) <= 0.1f)
+            if (Vector3.Distance(transform.position, pos1.position) <= 0.15f)
             {
-                rb.velocity = new Vector2(0, speed);
+                rb.velocity = new Vector2(0, -speed);
                 Velocity = rb.velocity;
             }
         }
